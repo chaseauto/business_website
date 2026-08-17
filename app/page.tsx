@@ -4,6 +4,67 @@ import { useEffect, useState, useRef } from "react";
 import { Menu } from "lucide-react";
 import Image from "next/image";
 
+function AnimatedCounter({
+  end,
+  duration = 1500,
+  suffix = "",
+}: {
+  end: number;
+  duration?: number;
+  suffix?: string;
+}) {
+  const [count, setCount] = useState(0);
+  const elementRef = useRef<HTMLSpanElement>(null);
+  const [hasStarted, setHasStarted] = useState(false);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting && !hasStarted) {
+          setHasStarted(true);
+        }
+      },
+      { threshold: 0.1 }
+    );
+
+    if (elementRef.current) {
+      observer.observe(elementRef.current);
+    }
+
+    return () => observer.disconnect();
+  }, [hasStarted]);
+
+  useEffect(() => {
+    if (!hasStarted) return;
+
+    let startTimestamp: number | null = null;
+    let animationFrameId: number;
+
+    const step = (timestamp: number) => {
+      if (!startTimestamp) startTimestamp = timestamp;
+      const progress = Math.min((timestamp - startTimestamp) / duration, 1);
+      setCount(Math.floor(progress * end));
+
+      if (progress < 1) {
+        animationFrameId = requestAnimationFrame(step);
+      } else {
+        setCount(end);
+      }
+    };
+
+    animationFrameId = requestAnimationFrame(step);
+
+    return () => cancelAnimationFrame(animationFrameId);
+  }, [hasStarted, end, duration]);
+
+  return (
+    <span ref={elementRef}>
+      {count.toLocaleString()}
+      {suffix}
+    </span>
+  );
+}
+
 export default function Home() {
   const [showStickyBar, setShowStickyBar] = useState(false);
   const servicesRef = useRef<HTMLDivElement>(null);
@@ -134,7 +195,7 @@ export default function Home() {
           <div className="grid grid-cols-3 md:max-w-[420px] border-t border-[#333330] mt-9 pt-6">
             <div className="text-center border-r border-[#333330]">
               <div className="font-display font-black text-2xl text-hazard">
-                5+
+                <AnimatedCounter end={5} suffix="+" />
               </div>
               <div className="text-[10.5px] text-[#A8A49B] uppercase tracking-wide mt-0.5">
                 Years Running
@@ -142,7 +203,7 @@ export default function Home() {
             </div>
             <div className="text-center border-r border-[#333330]">
               <div className="font-display font-black text-2xl text-hazard">
-                1000+
+                <AnimatedCounter end={1000} suffix="+" />
               </div>
               <div className="text-[10.5px] text-[#A8A49B] uppercase tracking-wide mt-0.5">
                 Vehicles Fixed
@@ -150,7 +211,7 @@ export default function Home() {
             </div>
             <div className="text-center">
               <div className="font-display font-black text-2xl text-hazard">
-                6+
+                <AnimatedCounter end={6} suffix="+" />
               </div>
               <div className="text-[10.5px] text-[#A8A49B] uppercase tracking-wide mt-0.5">
                 Certified Mechanics
@@ -444,7 +505,7 @@ export default function Home() {
               rel="noopener noreferrer"
               className="flex-1 flex items-center justify-center gap-2 px-5 py-[15px] rounded font-bold text-[15px] uppercase tracking-wide bg-transparent text-concrete border-[1.5px] border-[#4A4A46] hover:border-line transition-all"
             >
-              🗺️ Open in Google Maps
+              Open in Google Maps
             </a>
           </div>
 
