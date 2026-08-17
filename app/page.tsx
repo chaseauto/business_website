@@ -211,7 +211,8 @@ export default function Home() {
                   src="/images/transmission.jpeg"
                   alt="Transmission Repair"
                   fill
-                  sizes="(max-w-768px) 100vw, 33vw"
+                  sizes="(max-width-768px) 100vw, 33vw"
+                  quality={90}
                   className="object-cover transition-transform duration-300 hover:scale-105"
                 />
               </div>
@@ -238,7 +239,8 @@ export default function Home() {
                   src="/images/brake_service.png"
                   alt="Brake Service"
                   fill
-                  sizes="(max-w-768px) 100vw, 33vw"
+                  sizes="(max-width-768px) 100vw, 33vw"
+                  quality={90}
                   className="object-cover transition-transform duration-300 hover:scale-105"
                 />
               </div>
@@ -290,7 +292,8 @@ export default function Home() {
                   src="/images/electric_repairs.jpeg"
                   alt="Electrical Repairs"
                   fill
-                  sizes="(max-w-768px) 100vw, 33vw"
+                  sizes="(max-width-768px) 100vw, 33vw"
+                  quality={90}
                   className="object-cover transition-transform duration-300 hover:scale-105"
                 />
               </div>
@@ -316,7 +319,8 @@ export default function Home() {
                   src="/images/alignment.jpeg"
                   alt="Suspension & Alignment"
                   fill
-                  sizes="(max-w-768px) 100vw, 33vw"
+                  sizes="(max-width-768px) 100vw, 33vw"
+                  quality={90}
                   className="object-cover transition-transform duration-300 hover:scale-105"
                 />
               </div>
