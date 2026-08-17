@@ -1,11 +1,40 @@
+"use client";
+
+import { useEffect, useState, useRef } from "react";
 import { Menu } from "lucide-react";
 import Image from "next/image";
 
 export default function Home() {
+  const [showStickyBar, setShowStickyBar] = useState(false);
+  const servicesRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        setShowStickyBar(
+          entry.isIntersecting || entry.boundingClientRect.top < 0,
+        );
+      },
+      {
+        threshold: 0.1,
+      },
+    );
+
+    if (servicesRef.current) {
+      observer.observe(servicesRef.current);
+    }
+
+    return () => {
+      if (servicesRef.current) {
+        observer.unobserve(servicesRef.current);
+      }
+    };
+  }, []);
+
   return (
     <>
       <div className="bg-charcoal text-concrete text-[12.5px] font-medium">
-        <div className="max-w-[1120px] mx-auto px-5 py-[9px] flex justify-between items-center gap-3 flex-wrap">
+        <div className="max-w-280 mx-auto px-5 py-2.25 flex justify-between items-center gap-3 flex-wrap">
           <span className="opacity-90">
             10/11 Chief Jamiu, Elepe Royal Estate, Aga, Lagos
           </span>
@@ -62,10 +91,10 @@ export default function Home() {
             fill
             priority
             sizes="100vw"
-            className="object-cover opacity-40"
+            className="object-cover opacity-80"
           />
           <div className="absolute inset-0 bg-gradient-to-r from-charcoal via-charcoal/90 to-transparent" />
-          <div className="absolute inset-0 bg-gradient-to-t from-charcoal/50 via-transparent to-charcoal/50" />
+          <div className="absolute inset-0 bg-linear-to-t from-charcoal/50 via-transparent to-charcoal/50" />
         </div>
 
         <div className="relative z-10 max-w-[1120px] mx-auto px-5">
@@ -149,7 +178,7 @@ export default function Home() {
             <div className="bg-panel border border-line rounded overflow-hidden shadow-sm hover:shadow-md transition-shadow">
               <div className="relative aspect-[16/10] bg-[#D8D3C6] overflow-hidden">
                 <Image
-                  src="/images/engine_repair.png"
+                  src="/images/engine_diag.jpeg"
                   alt="Engine Diagnostics & Repair"
                   fill
                   sizes="(max-w-768px) 100vw, 33vw"
@@ -173,10 +202,13 @@ export default function Home() {
               </div>
             </div>
 
-            <div className="bg-panel border border-line rounded overflow-hidden shadow-sm hover:shadow-md transition-shadow">
+            <div
+              className="bg-panel border border-line rounded overflow-hidden shadow-sm hover:shadow-md transition-shadow"
+              ref={servicesRef}
+            >
               <div className="relative aspect-[16/10] bg-[#D8D3C6] overflow-hidden">
                 <Image
-                  src="/images/transmission_repair.png"
+                  src="/images/transmission.jpeg"
                   alt="Transmission Repair"
                   fill
                   sizes="(max-w-768px) 100vw, 33vw"
@@ -200,7 +232,7 @@ export default function Home() {
               </div>
             </div>
 
-            <div className="bg-panel border border-line rounded overflow-hidden shadow-sm hover:shadow-md transition-shadow">
+            {/* <div className="bg-panel border border-line rounded overflow-hidden shadow-sm hover:shadow-md transition-shadow">
               <div className="relative aspect-[16/10] bg-[#D8D3C6] overflow-hidden">
                 <Image
                   src="/images/brake_service.png"
@@ -250,12 +282,12 @@ export default function Home() {
                   Book service →
                 </a>
               </div>
-            </div>
+            </div> */}
 
             <div className="bg-panel border border-line rounded overflow-hidden shadow-sm hover:shadow-md transition-shadow">
               <div className="relative aspect-[16/10] bg-[#D8D3C6] overflow-hidden">
                 <Image
-                  src="/images/electrical_repair.png"
+                  src="/images/electric_repairs.jpeg"
                   alt="Electrical Repairs"
                   fill
                   sizes="(max-w-768px) 100vw, 33vw"
@@ -281,7 +313,7 @@ export default function Home() {
             <div className="bg-panel border border-line rounded overflow-hidden shadow-sm hover:shadow-md transition-shadow">
               <div className="relative aspect-[16/10] bg-[#D8D3C6] overflow-hidden">
                 <Image
-                  src="/images/suspension_service.png"
+                  src="/images/alignment.jpeg"
                   alt="Suspension & Alignment"
                   fill
                   sizes="(max-w-768px) 100vw, 33vw"
@@ -432,7 +464,13 @@ export default function Home() {
       </footer>
 
       {/* Sticky mobile action bar */}
-      <div className="md:hidden fixed bottom-0 left-0 right-0 flex bg-charcoal shadow-[0_-4px_14px_rgba(0,0,0,0.25)] z-[60]">
+      <div
+        className={`md:hidden fixed bottom-0 left-0 right-0 flex bg-charcoal shadow-[0_-4px_14px_rgba(0,0,0,0.25)] z-60 transition-all duration-300 ${
+          showStickyBar
+            ? "translate-y-0 opacity-100"
+            : "translate-y-full opacity-0 pointer-events-none"
+        }`}
+      >
         <a
           href="tel:+2348031234567"
           className="flex-1 flex flex-col items-center justify-center gap-0.5 py-2.5 pb-3.5 text-[11px] font-bold uppercase tracking-wide text-concrete border-r border-[#333330] bg-rust hover:bg-opacity-95 transition-all"
@@ -443,7 +481,7 @@ export default function Home() {
           href="https://wa.me/2348031234567"
           target="_blank"
           rel="noopener noreferrer"
-          className="flex-1 flex flex-col items-center justify-center gap-0.5 py-2.5 pb-3.5 text-[11px] font-bold uppercase tracking-wide text-concrete border-r border-[#333330] hover:bg-[#222] transition-colors"
+          className="flex-1 bg-hazard flex flex-col items-center justify-center gap-0.5 py-2.5 pb-3.5 text-[11px] font-bold uppercase tracking-wide text-concrete hover:bg-[#222] transition-colors"
         >
           WhatsApp
         </a>
