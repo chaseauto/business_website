@@ -2,68 +2,444 @@ import Image from "next/image";
 
 export default function Home() {
   return (
-    <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex flex-1 w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert h-5 w-[100px]"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the{" "}
-            <code className="rounded bg-black/[.06] px-1.5 py-0.5 font-mono text-[0.9em] dark:bg-white/[.08]">
-              page.tsx
-            </code>{" "}
-            file.
+    <>
+      <div className="bg-charcoal text-concrete text-[12.5px] font-medium">
+        <div className="max-w-[1120px] mx-auto px-5 py-[9px] flex justify-between items-center gap-3 flex-wrap">
+          <span className="opacity-90">
+            10/11 Chief Jamiu, Elepe Royal Estate, Aga, Lagos
+          </span>
+          <span className="text-hazard font-bold uppercase text-[11px] tracking-wide">
+            Open Now · Closes 7PM
+          </span>
+        </div>
+      </div>
+
+      {/* Nav */}
+      <nav className="bg-panel border-b border-line sticky top-0 z-50">
+        <div className="max-w-[1120px] mx-auto px-5 py-3.5 flex items-center justify-between">
+          <div className="font-display font-black text-[19px] tracking-wide">
+            <Image
+              src="/images/chase_logo.png"
+              width="100"
+              height="100"
+              alt="Chase Logo"
+            />
+          </div>
+          <div className="hidden md:flex gap-7 text-sm font-semibold">
+            <a href="#services" className="hover:text-rust transition-colors">
+              Services
+            </a>
+            <a href="#about" className="hover:text-rust transition-colors">
+              About
+            </a>
+            <a href="#gallery" className="hover:text-rust transition-colors">
+              Gallery
+            </a>
+            <a href="#contact" className="hover:text-rust transition-colors">
+              Contact
+            </a>
+          </div>
+          <a
+            href="tel:+2348031234567"
+            className="bg-charcoal text-concrete px-[18px] py-2.5 rounded text-[13px] font-bold uppercase tracking-wide hover:bg-rust transition-colors"
+          >
+            Call Now
+          </a>
+        </div>
+      </nav>
+
+      {/* Signature hazard stripe */}
+      <div className="h-2 hazard-stripe"></div>
+
+      {/* Hero */}
+      <header className="relative pt-9 pb-7 bg-charcoal text-concrete overflow-hidden">
+        <div className="max-w-[1120px] mx-auto px-5">
+          <h1 className="font-display font-black uppercase leading-[1.05] text-[34px] sm:text-[44px] md:text-[56px] max-w-[11ch]">
+            Your car,
+            <br />
+            fixed <span className="text-hazard">right</span>,<br />
+            the first time.
           </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
+          <p className="mt-3.5 text-[15.5px] text-[#C9C6BE] max-w-[42ch]">
+            Engine, transmission, brakes, AC and electrical repairs — done by
+            mechanics who stand behind their work.
+          </p>
+
+          <div className="flex flex-col md:flex-row gap-2.5 mt-6">
             <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
+              href="tel:+2348031234567"
+              className="flex-1 flex items-center justify-center gap-2 px-5 py-[15px] rounded font-bold text-[15px] uppercase tracking-wide bg-rust text-white hover:bg-opacity-90 transition-all"
             >
-              Templates
-            </a>{" "}
-            or the{" "}
+              Call Now
+            </a>
             <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
+              href="https://wa.me/2348031234567"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex-1 flex items-center justify-center gap-2 px-5 py-[15px] rounded font-bold text-[15px] uppercase tracking-wide bg-hazard text-charcoal hover:bg-opacity-90 transition-all"
             >
-              Learning
-            </a>{" "}
-            center.
+              WhatsApp Us
+            </a>
+            <a
+              href="#contact"
+              className="flex-1 flex items-center justify-center gap-2 px-5 py-[15px] rounded font-bold text-[15px] uppercase tracking-wide bg-transparent text-concrete border-[1.5px] border-[#4A4A46] hover:border-line transition-all"
+            >
+              Get Directions
+            </a>
+          </div>
+
+          <div className="grid grid-cols-3 md:max-w-[420px] border-t border-[#333330] mt-7 pt-5">
+            <div className="text-center border-r border-[#333330]">
+              <div className="font-display font-black text-2xl text-hazard">
+                8+
+              </div>
+              <div className="text-[10.5px] text-[#A8A49B] uppercase tracking-wide mt-0.5">
+                Years Running
+              </div>
+            </div>
+            <div className="text-center border-r border-[#333330]">
+              <div className="font-display font-black text-2xl text-hazard">
+                4,500+
+              </div>
+              <div className="text-[10.5px] text-[#A8A49B] uppercase tracking-wide mt-0.5">
+                Vehicles Fixed
+              </div>
+            </div>
+            <div className="text-center">
+              <div className="font-display font-black text-2xl text-hazard">
+                6+
+              </div>
+              <div className="text-[10.5px] text-[#A8A49B] uppercase tracking-wide mt-0.5">
+                Certified Mechanics
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      {/* Services */}
+      <section id="services" className="py-11">
+        <div className="max-w-[1120px] mx-auto px-5">
+          <div className="text-xs font-bold text-rust uppercase tracking-widest mb-2">
+            What We Fix
+          </div>
+          <h2 className="text-[26px] font-extrabold mb-2.5 font-display uppercase">
+            Our Services
+          </h2>
+          <p className="text-[14.5px] text-steel max-w-[48ch] mb-7">
+            Full diagnostics and repair across every major system — no
+            guesswork, clear pricing.
+          </p>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-3.5">
+            <div className="bg-panel border border-line rounded overflow-hidden shadow-sm hover:shadow-md transition-shadow">
+              <div className="relative aspect-[16/10] bg-[#D8D3C6] overflow-hidden">
+                <Image
+                  src="/images/engine_repair.png"
+                  alt="Engine Diagnostics & Repair"
+                  fill
+                  sizes="(max-w-768px) 100vw, 33vw"
+                  className="object-cover transition-transform duration-300 hover:scale-105"
+                />
+              </div>
+              <div className="p-4">
+                <h3 className="text-base font-extrabold mb-1.5">
+                  Engine Diagnostics &amp; Repair
+                </h3>
+                <p className="text-[13.5px] text-steel mb-2.5">
+                  Warning lights, rough idling, power loss — properly diagnosed,
+                  properly fixed.
+                </p>
+                <a
+                  href="#contact"
+                  className="text-[13px] font-bold text-rust hover:underline"
+                >
+                  Book service →
+                </a>
+              </div>
+            </div>
+
+            <div className="bg-panel border border-line rounded overflow-hidden shadow-sm hover:shadow-md transition-shadow">
+              <div className="relative aspect-[16/10] bg-[#D8D3C6] overflow-hidden">
+                <Image
+                  src="/images/transmission_repair.png"
+                  alt="Transmission Repair"
+                  fill
+                  sizes="(max-w-768px) 100vw, 33vw"
+                  className="object-cover transition-transform duration-300 hover:scale-105"
+                />
+              </div>
+              <div className="p-4">
+                <h3 className="text-base font-extrabold mb-1.5">
+                  Transmission Repair
+                </h3>
+                <p className="text-[13.5px] text-steel mb-2.5">
+                  Slipping gears, delayed shifts, unusual noise — full
+                  transmission service.
+                </p>
+                <a
+                  href="#contact"
+                  className="text-[13px] font-bold text-rust hover:underline"
+                >
+                  Book service →
+                </a>
+              </div>
+            </div>
+
+            <div className="bg-panel border border-line rounded overflow-hidden shadow-sm hover:shadow-md transition-shadow">
+              <div className="relative aspect-[16/10] bg-[#D8D3C6] overflow-hidden">
+                <Image
+                  src="/images/brake_service.png"
+                  alt="Brake Service"
+                  fill
+                  sizes="(max-w-768px) 100vw, 33vw"
+                  className="object-cover transition-transform duration-300 hover:scale-105"
+                />
+              </div>
+              <div className="p-4">
+                <h3 className="text-base font-extrabold mb-1.5">
+                  Brake Service
+                </h3>
+                <p className="text-[13.5px] text-steel mb-2.5">
+                  Pads, rotors, fluid, and full brake system inspection.
+                </p>
+                <a
+                  href="#contact"
+                  className="text-[13px] font-bold text-rust hover:underline"
+                >
+                  Book service →
+                </a>
+              </div>
+            </div>
+
+            <div className="bg-panel border border-line rounded overflow-hidden shadow-sm hover:shadow-md transition-shadow">
+              <div className="relative aspect-[16/10] bg-[#D8D3C6] overflow-hidden">
+                <Image
+                  src="/images/ac_service.png"
+                  alt="AC Servicing"
+                  fill
+                  sizes="(max-w-768px) 100vw, 33vw"
+                  className="object-cover transition-transform duration-300 hover:scale-105"
+                />
+              </div>
+              <div className="p-4">
+                <h3 className="text-base font-extrabold mb-1.5">
+                  AC Servicing
+                </h3>
+                <p className="text-[13.5px] text-steel mb-2.5">
+                  Not cooling, strange smell, weak airflow — restored fast.
+                </p>
+                <a
+                  href="#contact"
+                  className="text-[13px] font-bold text-rust hover:underline"
+                >
+                  Book service →
+                </a>
+              </div>
+            </div>
+
+            <div className="bg-panel border border-line rounded overflow-hidden shadow-sm hover:shadow-md transition-shadow">
+              <div className="relative aspect-[16/10] bg-[#D8D3C6] overflow-hidden">
+                <Image
+                  src="/images/electrical_repair.png"
+                  alt="Electrical Repairs"
+                  fill
+                  sizes="(max-w-768px) 100vw, 33vw"
+                  className="object-cover transition-transform duration-300 hover:scale-105"
+                />
+              </div>
+              <div className="p-4">
+                <h3 className="text-base font-extrabold mb-1.5">
+                  Electrical Repairs
+                </h3>
+                <p className="text-[13.5px] text-steel mb-2.5">
+                  Battery, alternator, wiring faults, dashboard warning lights.
+                </p>
+                <a
+                  href="#contact"
+                  className="text-[13px] font-bold text-rust hover:underline"
+                >
+                  Book service →
+                </a>
+              </div>
+            </div>
+
+            <div className="bg-panel border border-line rounded overflow-hidden shadow-sm hover:shadow-md transition-shadow">
+              <div className="relative aspect-[16/10] bg-[#D8D3C6] overflow-hidden">
+                <Image
+                  src="/images/suspension_service.png"
+                  alt="Suspension & Alignment"
+                  fill
+                  sizes="(max-w-768px) 100vw, 33vw"
+                  className="object-cover transition-transform duration-300 hover:scale-105"
+                />
+              </div>
+              <div className="p-4">
+                <h3 className="text-base font-extrabold mb-1.5">
+                  Suspension &amp; Alignment
+                </h3>
+                <p className="text-[13.5px] text-steel mb-2.5">
+                  Smoother ride, even tire wear, better handling.
+                </p>
+                <a
+                  href="#contact"
+                  className="text-[13px] font-bold text-rust hover:underline"
+                >
+                  Book service →
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Trust bar */}
+      <div className="bg-panel border-t border-b border-line py-6">
+        <div className="max-w-[1120px] mx-auto px-5 flex flex-col md:flex-row md:justify-between md:items-center gap-4">
+          <div className="flex items-center gap-2.5">
+            <span className="text-hazard text-lg tracking-[2px]">★★★★★</span>
+            <span className="font-extrabold text-base">4.9</span>
+            <span className="text-[13px] text-steel">
+              from 180+ Google reviews
+            </span>
+          </div>
+          <div className="text-[13px] font-bold text-steel uppercase tracking-wide">
+            Serving Ikorodu &amp; Lagos since 2018
+          </div>
+        </div>
+      </div>
+
+      {/* About */}
+      <section id="about" className="py-11">
+        <div className="max-w-[1120px] mx-auto px-5">
+          <div className="text-xs font-bold text-rust uppercase tracking-widest mb-2">
+            Why Chase
+          </div>
+          <h2 className="text-[26px] font-extrabold mb-2.5 font-display uppercase">
+            Real mechanics. Real accountability.
+          </h2>
+          <p className="text-[14.5px] text-steel max-w-[48ch] leading-relaxed">
+            Founded by Charles Chase in 2018, Chase Automobiles has built a
+            reputation for uncompromising quality and diagnostic precision in
+            Ikorodu. Our team of certified technicians brings combined decades
+            of experience, utilizing modern diagnostic equipment to fix complex
+            modern vehicles. We stand behind our work, ensuring every customer
+            gets direct communication, transparent pricing, and a solid repair
+            guarantee.
           </p>
         </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert h-[14px] w-4"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={14}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
+      </section>
+
+      {/* Gallery */}
+      <section id="gallery" className="py-11">
+        <div className="max-w-[1120px] mx-auto px-5">
+          <div className="text-xs font-bold text-rust uppercase tracking-widest mb-2">
+            Recent Work
+          </div>
+          <h2 className="text-[26px] font-extrabold mb-7 font-display uppercase">
+            From Our Workshop
+          </h2>
+          <div className="gallery-scroll flex gap-2.5 overflow-x-auto pb-1.5">
+            {[1, 2, 3, 4, 5].map((i) => (
+              <div
+                key={i}
+                className="relative flex-none w-[140px] h-[140px] rounded bg-[#D8D3C6] overflow-hidden shadow-sm hover:shadow-md transition-shadow"
+              >
+                <Image
+                  src={`/images/gallery_${i}.png`}
+                  alt={`Recent work screenshot ${i}`}
+                  fill
+                  sizes="140px"
+                  className="object-cover transition-transform duration-300 hover:scale-110"
+                />
+              </div>
+            ))}
+          </div>
         </div>
-      </main>
-    </div>
+      </section>
+
+      {/* Contact */}
+      <section id="contact" className="bg-charcoal text-concrete py-11">
+        <div className="max-w-[1120px] mx-auto px-5">
+          <div className="text-xs font-bold text-hazard uppercase tracking-widest mb-2">
+            Visit Us
+          </div>
+          <h2 className="text-[26px] font-extrabold mb-2.5 font-display uppercase text-concrete">
+            Find &amp; Reach Chase Automobiles
+          </h2>
+          <p className="text-[#C9C6BE] text-[14.5px] leading-relaxed">
+            45 Oba Sekumade Road, Ogolonto, Ikorodu, Lagos
+            <br />
+            Open Mon–Sat, 8AM–7PM
+          </p>
+
+          <div className="flex flex-col md:flex-row gap-2.5 mt-5">
+            <a
+              href="tel:+2348031234567"
+              className="flex-1 flex items-center justify-center gap-2 px-5 py-[15px] rounded font-bold text-[15px] uppercase tracking-wide bg-rust text-white hover:bg-opacity-90 transition-all"
+            >
+              📞 Call Now
+            </a>
+            <a
+              href="https://wa.me/2348031234567"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex-1 flex items-center justify-center gap-2 px-5 py-[15px] rounded font-bold text-[15px] uppercase tracking-wide bg-hazard text-charcoal hover:bg-opacity-90 transition-all"
+            >
+              Chat on WhatsApp
+            </a>
+            <a
+              href="https://www.google.com/maps/search/?api=1&query=Chase+Automobiles+Oba+Sekumade+Road+Ikorodu+Lagos"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex-1 flex items-center justify-center gap-2 px-5 py-[15px] rounded font-bold text-[15px] uppercase tracking-wide bg-transparent text-concrete border-[1.5px] border-[#4A4A46] hover:border-line transition-all"
+            >
+              🗺️ Open in Google Maps
+            </a>
+          </div>
+
+          <div className="mt-6 aspect-[16/9] bg-[#2A2A26] rounded overflow-hidden border border-[#333330]">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3963.330789892914!2d3.500757873668018!3d6.605753493388172!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x103befce081b1c95%3A0x445f3505a2c36a9a!2sChase%20Automobile%20Services!5e0!3m2!1sen!2sng!4v1786965867621!5m2!1sen!2sng"
+              width="100%"
+              height="100%"
+              style={{ border: 0 }}
+              allowFullScreen={true}
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+              title="Chase Automobiles Map Location"
+            ></iframe>
+          </div>
+        </div>
+      </section>
+
+      <footer className="py-5 pb-[100px] md:pb-8 text-center text-xs text-steel">
+        © 2026 Chase Automobiles. All rights reserved.
+      </footer>
+
+      {/* Sticky mobile action bar */}
+      <div className="md:hidden fixed bottom-0 left-0 right-0 flex bg-charcoal shadow-[0_-4px_14px_rgba(0,0,0,0.25)] z-[60]">
+        <a
+          href="tel:+2348031234567"
+          className="flex-1 flex flex-col items-center justify-center gap-0.5 py-2.5 pb-3.5 text-[11px] font-bold uppercase tracking-wide text-concrete border-r border-[#333330] bg-rust hover:bg-opacity-95 transition-all"
+        >
+          📞 Call
+        </a>
+        <a
+          href="https://wa.me/2348031234567"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="flex-1 flex flex-col items-center justify-center gap-0.5 py-2.5 pb-3.5 text-[11px] font-bold uppercase tracking-wide text-concrete border-r border-[#333330] hover:bg-[#222] transition-colors"
+        >
+          WhatsApp
+        </a>
+        <a
+          href="#contact"
+          className="flex-1 flex flex-col items-center justify-center gap-0.5 py-2.5 pb-3.5 text-[11px] font-bold uppercase tracking-wide text-concrete hover:bg-[#222] transition-colors"
+        >
+          Directions
+        </a>
+      </div>
+    </>
   );
 }
