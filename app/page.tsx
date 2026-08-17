@@ -1,3 +1,4 @@
+import { Menu } from "lucide-react";
 import Image from "next/image";
 
 export default function Home() {
@@ -39,12 +40,10 @@ export default function Home() {
               Contact
             </a>
           </div>
-          <a
-            href="tel:+2348031234567"
-            className="bg-charcoal text-concrete px-[18px] py-2.5 rounded text-[13px] font-bold uppercase tracking-wide hover:bg-rust transition-colors"
-          >
-            Call Now
-          </a>
+
+          <button className="md:hidden">
+            <Menu />
+          </button>
         </div>
       </nav>
 
@@ -52,20 +51,35 @@ export default function Home() {
       <div className="h-2 hazard-stripe"></div>
 
       {/* Hero */}
-      <header className="relative pt-9 pb-7 bg-charcoal text-concrete overflow-hidden">
-        <div className="max-w-[1120px] mx-auto px-5">
-          <h1 className="font-display font-black uppercase leading-[1.05] text-[34px] sm:text-[44px] md:text-[56px] max-w-[11ch]">
-            Your car,
-            <br />
-            fixed <span className="text-hazard">right</span>,<br />
-            the first time.
+      {/* Hero */}
+
+      <header className="relative pt-20 pb-16 bg-charcoal text-concrete overflow-hidden">
+        {/* Background Image with Overlay */}
+        <div className="absolute inset-0 z-0">
+          <Image
+            src="/images/hero-img.jpg"
+            alt="Chase Automobiles Workshop"
+            fill
+            priority
+            sizes="100vw"
+            className="object-cover opacity-40"
+          />
+          <div className="absolute inset-0 bg-gradient-to-r from-charcoal via-charcoal/90 to-transparent" />
+          <div className="absolute inset-0 bg-gradient-to-t from-charcoal/50 via-transparent to-charcoal/50" />
+        </div>
+
+        <div className="relative z-10 max-w-[1120px] mx-auto px-5">
+          <h1 className="font-display font-black uppercase leading-[1.2] text-[38px] sm:text-[48px] md:text-[60px] max-w-[15ch]">
+            Your car, <br />{" "}
+            <span className="text-[#0854FF]">fixed right </span> <br /> the
+            first time.
           </h1>
-          <p className="mt-3.5 text-[15.5px] text-[#C9C6BE] max-w-[42ch]">
-            Engine, transmission, brakes, AC and electrical repairs — done by
+          <p className="mt-4 text-[15.5px] text-[#C9C6BE] max-w-[42ch]">
+            Engine, transmission, brakes, AC and electrical repairs done by
             mechanics who stand behind their work.
           </p>
 
-          <div className="flex flex-col md:flex-row gap-2.5 mt-6">
+          <div className="flex flex-col md:flex-row gap-2.5 mt-8 max-w-[700px]">
             <a
               href="tel:+2348031234567"
               className="flex-1 flex items-center justify-center gap-2 px-5 py-[15px] rounded font-bold text-[15px] uppercase tracking-wide bg-rust text-white hover:bg-opacity-90 transition-all"
@@ -76,7 +90,7 @@ export default function Home() {
               href="https://wa.me/2348031234567"
               target="_blank"
               rel="noopener noreferrer"
-              className="flex-1 flex items-center justify-center gap-2 px-5 py-[15px] rounded font-bold text-[15px] uppercase tracking-wide bg-hazard text-charcoal hover:bg-opacity-90 transition-all"
+              className="flex-1 flex items-center justify-center gap-2 px-5 py-[15px] rounded font-bold text-[15px] uppercase tracking-wide bg-hazard text-white hover:bg-opacity-90 transition-all"
             >
               WhatsApp Us
             </a>
@@ -88,10 +102,10 @@ export default function Home() {
             </a>
           </div>
 
-          <div className="grid grid-cols-3 md:max-w-[420px] border-t border-[#333330] mt-7 pt-5">
+          <div className="grid grid-cols-3 md:max-w-[420px] border-t border-[#333330] mt-9 pt-6">
             <div className="text-center border-r border-[#333330]">
               <div className="font-display font-black text-2xl text-hazard">
-                8+
+                5+
               </div>
               <div className="text-[10.5px] text-[#A8A49B] uppercase tracking-wide mt-0.5">
                 Years Running
@@ -99,7 +113,7 @@ export default function Home() {
             </div>
             <div className="text-center border-r border-[#333330]">
               <div className="font-display font-black text-2xl text-hazard">
-                4,500+
+                1000+
               </div>
               <div className="text-[10.5px] text-[#A8A49B] uppercase tracking-wide mt-0.5">
                 Vehicles Fixed
@@ -378,13 +392,13 @@ export default function Home() {
               href="tel:+2348031234567"
               className="flex-1 flex items-center justify-center gap-2 px-5 py-[15px] rounded font-bold text-[15px] uppercase tracking-wide bg-rust text-white hover:bg-opacity-90 transition-all"
             >
-              📞 Call Now
+              Call Now
             </a>
             <a
               href="https://wa.me/2348031234567"
               target="_blank"
               rel="noopener noreferrer"
-              className="flex-1 flex items-center justify-center gap-2 px-5 py-[15px] rounded font-bold text-[15px] uppercase tracking-wide bg-hazard text-charcoal hover:bg-opacity-90 transition-all"
+              className="flex-1 flex items-center justify-center gap-2 px-5 py-[15px] rounded font-bold text-[15px] uppercase tracking-wide bg-hazard text-white hover:bg-opacity-90 transition-all"
             >
               Chat on WhatsApp
             </a>
@@ -423,7 +437,7 @@ export default function Home() {
           href="tel:+2348031234567"
           className="flex-1 flex flex-col items-center justify-center gap-0.5 py-2.5 pb-3.5 text-[11px] font-bold uppercase tracking-wide text-concrete border-r border-[#333330] bg-rust hover:bg-opacity-95 transition-all"
         >
-          📞 Call
+          Call
         </a>
         <a
           href="https://wa.me/2348031234567"
