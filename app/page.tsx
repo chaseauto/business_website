@@ -66,13 +66,15 @@ function AnimatedCounter({
 }
 
 export default function Home() {
-  const [showStickyBar, setShowStickyBar] = useState(false);
+  const [isServicesActive, setIsServicesActive] = useState(false);
+  const [isContactVisible, setIsContactVisible] = useState(false);
   const servicesRef = useRef<HTMLDivElement>(null);
+  const contactRef = useRef<HTMLElement>(null);
 
   useEffect(() => {
     const observer = new IntersectionObserver(
       ([entry]) => {
-        setShowStickyBar(
+        setIsServicesActive(
           entry.isIntersecting || entry.boundingClientRect.top < 0,
         );
       },
@@ -91,6 +93,29 @@ export default function Home() {
       }
     };
   }, []);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        setIsContactVisible(entry.isIntersecting);
+      },
+      {
+        threshold: 0.05,
+      },
+    );
+
+    if (contactRef.current) {
+      observer.observe(contactRef.current);
+    }
+
+    return () => {
+      if (contactRef.current) {
+        observer.unobserve(contactRef.current);
+      }
+    };
+  }, []);
+
+  const showStickyBar = isServicesActive && !isContactVisible;
 
   return (
     <>
@@ -238,7 +263,7 @@ export default function Home() {
             <div className="bg-panel border border-line rounded overflow-hidden shadow-sm hover:shadow-md transition-shadow">
               <div className="relative aspect-16/10 bg-[#D8D3C6] overflow-hidden">
                 <Image
-                  src="/images/engine_diag.webp"
+                  src="/images/why_section.webp"
                   alt="Engine Diagnostics & Repair"
                   fill
                   sizes="(max-w-768px) 100vw, 33vw"
@@ -466,7 +491,7 @@ export default function Home() {
             </p>
           </div>
 
-          <div className="mt-10 grid gap-px overflow-hidden rounded-xl border-2 border-hazard bg-black/10 md:grid-cols-3">
+          <div className="mt-10 grid gap-px overflow-hidden rounded-xl bg-black/10 md:grid-cols-3">
             <div className="bg-white/90 p-6">
               <span className="mb-5 block text-xs font-bold tracking-widest text-rust">
                 01
@@ -525,13 +550,13 @@ export default function Home() {
             From Our Workshop
           </h2>
           <div className="gallery-scroll flex gap-2.5 overflow-x-auto pb-1.5">
-            {[1, 2, 3, 4, 5].map((i) => (
+            {[1, 2, 3].map((i) => (
               <div
                 key={i}
                 className="relative flex-none w-35 h-35 rounded bg-[#D8D3C6] overflow-hidden shadow-sm hover:shadow-md transition-shadow"
               >
                 <Image
-                  src={`/images/gallery_${i}.png`}
+                  src={`/images/car_${i}.webp`}
                   alt={`Recent work screenshot ${i}`}
                   fill
                   sizes="140px"
@@ -544,7 +569,11 @@ export default function Home() {
       </section>
 
       {/* Contact */}
-      <section id="contact" className="bg-charcoal text-concrete py-11">
+      <section
+        id="contact"
+        ref={contactRef}
+        className="bg-charcoal text-concrete py-11"
+      >
         <div className="max-w-280 mx-auto px-5">
           <div className="text-sm font-bold text-hazard uppercase tracking-widest mb-2">
             Visit Us
@@ -553,7 +582,7 @@ export default function Home() {
             Find &amp; Reach Chase Automobiles
           </h2>
           <p className="text-[#C9C6BE] text-[14.5px] leading-relaxed">
-            45 Oba Sekumade Road, Ogolonto, Ikorodu, Lagos
+            10/11 Chief Jamiu, Elepe Royal Estate, Aga, Lagos
             <br />
             Open Mon–Sat, 8AM–7PM
           </p>
