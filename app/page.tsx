@@ -566,6 +566,14 @@ export default function Home() {
               </div>
             ))}
           </div>
+          <div className="mt-6">
+            <a
+              href="/gallery"
+              className="inline-block px-6 py-3 bg-rust text-white font-bold text-[14px] uppercase tracking-wide rounded hover:bg-opacity-90 transition-all"
+            >
+              Go To Gallery
+            </a>
+          </div>
         </div>
       </section>
 
