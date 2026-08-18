@@ -628,7 +628,7 @@ export default function Home() {
         </div>
       </section>
 
-      <footer className="py-5 pb-25 md:pb-8 text-center text-sm text-steel">
+      <footer className="py-5 pb-8 md:pb-8 text-center text-sm text-steel">
         © 2026 Chase Automobiles. All rights reserved.
       </footer>
 
