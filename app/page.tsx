@@ -255,8 +255,7 @@ export default function Home() {
             Our Services
           </h2>
           <p className="text-[14.5px] text-steel max-w-[48ch] mb-7">
-            Full diagnostics and repair across every major system — no
-            guesswork, clear pricing.
+            Full diagnostics and repair across every major system
           </p>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-3.5">
@@ -266,6 +265,8 @@ export default function Home() {
                   src="/images/why_section.webp"
                   alt="Engine Diagnostics & Repair"
                   fill
+                  quality={95}
+                  unoptimized
                   sizes="(max-w-768px) 100vw, 33vw"
                   className="object-cover transition-transform duration-300 hover:scale-105"
                 />
