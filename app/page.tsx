@@ -272,7 +272,8 @@ export default function Home() {
                   alt="Transmission Repair"
                   fill
                   sizes="(max-width-768px) 100vw, 33vw"
-                  quality={90}
+                  quality={95}
+                  unoptimized
                   className="object-cover transition-transform duration-300 hover:scale-105"
                 />
               </div>
@@ -300,7 +301,8 @@ export default function Home() {
                   alt="Brake Service"
                   fill
                   sizes="(max-width-768px) 100vw, 33vw"
-                  quality={90}
+                  quality={95}
+                  unoptimized
                   className="object-cover transition-transform duration-300 hover:scale-105"
                 />
               </div>
@@ -353,7 +355,8 @@ export default function Home() {
                   alt="Electrical Repairs"
                   fill
                   sizes="(max-width-768px) 100vw, 33vw"
-                  quality={90}
+                  quality={95}
+                  unoptimized
                   className="object-cover transition-transform duration-300 hover:scale-105"
                 />
               </div>
@@ -381,7 +384,8 @@ export default function Home() {
                   alt="Suspension & Alignment"
                   fill
                   sizes="(max-width-768px) 100vw, 33vw"
-                  quality={90}
+                  quality={95}
+                  unoptimized
                   className="object-cover transition-transform duration-300 hover:scale-105"
                 />
               </div>
