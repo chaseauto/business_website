@@ -238,7 +238,7 @@ export default function Home() {
             <div className="bg-panel border border-line rounded overflow-hidden shadow-sm hover:shadow-md transition-shadow">
               <div className="relative aspect-16/10 bg-[#D8D3C6] overflow-hidden">
                 <Image
-                  src="/images/open_car.webp"
+                  src="/images/engine_diag.webp"
                   alt="Engine Diagnostics & Repair"
                   fill
                   sizes="(max-w-768px) 100vw, 33vw"
@@ -427,36 +427,98 @@ export default function Home() {
             </span>
           </div>
           <div className="text-[13px] font-bold text-steel uppercase tracking-wide">
-            Serving Ikorodu &amp; Lagos since 2018
+            Serving Ikorodu &amp; Lagos since 2022
           </div>
         </div>
       </div>
 
       {/* About */}
-      <section id="about" className="py-11">
-        <div className="max-w-280 mx-auto px-5">
-          <div className="text-xs font-bold text-rust uppercase tracking-widest mb-2">
-            Why Chase
+      <section
+        id="about"
+        className="relative isolate overflow-hidden py-20 md:py-24"
+      >
+        <Image
+          src="/images/hero-bg.jpg"
+          alt="Chase Automobiles Workshop"
+          fill
+          sizes="100vw"
+          className="object-cover opacity-100"
+        />
+
+        <div className="absolute inset-0 bg-white/50" />
+
+        <div className="relative z-10 mx-auto max-w-7xl px-5">
+          <div className="max-w-2xl">
+            <div className="mb-3 text-sm font-bold uppercase tracking-[0.2em] text-rust">
+              Why Chase
+            </div>
+
+            <h2 className="mb-4 font-display text-3xl font-extrabold uppercase leading-tight md:text-4xl">
+              Precision work. <br />
+              <span className="text-hazard">No guesswork.</span>
+            </h2>
+
+            <p className="max-w-[58ch] text-[15px] font-medium leading-relaxed text-black/75">
+              We diagnose the problem before recommending the repair. With
+              modern diagnostic equipment, experienced technicians, transparent
+              pricing, and direct communication, Chase Automobiles gives you
+              confidence in every repair.
+            </p>
           </div>
-          <h2 className="text-[26px] font-extrabold mb-2.5 font-display uppercase">
-            Real mechanics. Real accountability.
-          </h2>
-          <p className="text-[14.5px] text-steel max-w-[48ch] leading-relaxed">
-            Founded by Charles Chase in 2018, Chase Automobiles has built a
-            reputation for uncompromising quality and diagnostic precision in
-            Ikorodu. Our team of certified technicians brings combined decades
-            of experience, utilizing modern diagnostic equipment to fix complex
-            modern vehicles. We stand behind our work, ensuring every customer
-            gets direct communication, transparent pricing, and a solid repair
-            guarantee.
-          </p>
+
+          <div className="mt-10 grid gap-px overflow-hidden rounded-xl border-2 border-hazard bg-black/10 md:grid-cols-3">
+            <div className="bg-white/90 p-6">
+              <span className="mb-5 block text-xs font-bold tracking-widest text-rust">
+                01
+              </span>
+
+              <h3 className="mb-2 font-display text-lg font-extrabold uppercase">
+                Accurate Diagnostics
+              </h3>
+
+              <p className="text-sm font-medium leading-relaxed text-black/65">
+                We identify the actual problem before recommending a repair,
+                using modern diagnostic equipment and proven expertise.
+              </p>
+            </div>
+
+            <div className="bg-white/90 p-6">
+              <span className="mb-5 block text-xs font-bold tracking-widest text-rust">
+                02
+              </span>
+
+              <h3 className="mb-2 font-display text-lg font-extrabold uppercase">
+                Transparent Repairs
+              </h3>
+
+              <p className="text-sm font-medium leading-relaxed text-black/65">
+                Clear explanations, honest recommendations, and transparent
+                pricing before the work begins. No unnecessary repairs.
+              </p>
+            </div>
+
+            <div className="bg-white/90 p-6">
+              <span className="mb-5 block text-xs font-bold tracking-widest text-rust">
+                03
+              </span>
+
+              <h3 className="mb-2 font-display text-lg font-extrabold uppercase">
+                Work We Stand Behind
+              </h3>
+
+              <p className="text-sm font-medium leading-relaxed text-black/65">
+                Quality workmanship matters. We stand behind our repairs so you
+                can leave the workshop with confidence.
+              </p>
+            </div>
+          </div>
         </div>
       </section>
 
       {/* Gallery */}
       <section id="gallery" className="py-11">
         <div className="max-w-280 mx-auto px-5">
-          <div className="text-xs font-bold text-rust uppercase tracking-widest mb-2">
+          <div className="text-sm font-bold text-rust uppercase tracking-widest mb-2">
             Recent Work
           </div>
           <h2 className="text-[26px] font-extrabold mb-7 font-display uppercase">
@@ -484,7 +546,7 @@ export default function Home() {
       {/* Contact */}
       <section id="contact" className="bg-charcoal text-concrete py-11">
         <div className="max-w-280 mx-auto px-5">
-          <div className="text-xs font-bold text-hazard uppercase tracking-widest mb-2">
+          <div className="text-sm font-bold text-hazard uppercase tracking-widest mb-2">
             Visit Us
           </div>
           <h2 className="text-[26px] font-extrabold mb-2.5 font-display uppercase text-concrete">
@@ -536,7 +598,7 @@ export default function Home() {
         </div>
       </section>
 
-      <footer className="py-5 pb-25 md:pb-8 text-center text-xs text-steel">
+      <footer className="py-5 pb-25 md:pb-8 text-center text-sm text-steel">
         © 2026 Chase Automobiles. All rights reserved.
       </footer>
 
