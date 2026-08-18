@@ -24,7 +24,7 @@ function AnimatedCounter({
           setHasStarted(true);
         }
       },
-      { threshold: 0.1 }
+      { threshold: 0.1 },
     );
 
     if (elementRef.current) {
@@ -107,7 +107,7 @@ export default function Home() {
 
       {/* Nav */}
       <nav className="bg-panel border-b border-line sticky top-0 z-50">
-        <div className="max-w-[1120px] mx-auto px-5 py-3.5 flex items-center justify-between">
+        <div className="max-w-280 mx-auto px-5 py-3.5 flex items-center justify-between">
           <div className="font-display font-black text-[19px] tracking-wide">
             <Image
               src="/images/chase_logo.png"
@@ -154,25 +154,24 @@ export default function Home() {
             sizes="100vw"
             className="object-cover opacity-80"
           />
-          <div className="absolute inset-0 bg-gradient-to-r from-charcoal via-charcoal/90 to-transparent" />
+          <div className="absolute inset-0 bg-linear-to-r from-charcoal via-charcoal/90 to-transparent" />
           <div className="absolute inset-0 bg-linear-to-t from-charcoal/50 via-transparent to-charcoal/50" />
         </div>
 
-        <div className="relative z-10 max-w-[1120px] mx-auto px-5">
+        <div className="relative z-10 max-w-280 mx-auto px-5">
           <h1 className="font-display font-black uppercase leading-[1.2] text-[38px] sm:text-[48px] md:text-[60px] max-w-[15ch]">
-            Your car, <br />{" "}
-            <span className="text-[#0854FF]">fixed right </span> <br /> the
-            first time.
+            Your car, <br /> <span className="text-hazard">fixed right </span>{" "}
+            <br /> the first time.
           </h1>
           <p className="mt-4 text-[15.5px] text-[#C9C6BE] max-w-[42ch]">
             Engine, transmission, brakes, AC and electrical repairs done by
             mechanics who stand behind their work.
           </p>
 
-          <div className="flex flex-col md:flex-row gap-2.5 mt-8 max-w-[700px]">
+          <div className="flex flex-col md:flex-row gap-2.5 mt-8 max-w-175">
             <a
               href="tel:+2348031234567"
-              className="flex-1 flex items-center justify-center gap-2 px-5 py-[15px] rounded font-bold text-[15px] uppercase tracking-wide bg-rust text-white hover:bg-opacity-90 transition-all"
+              className="flex-1 flex items-center justify-center gap-2 px-5 py-3.75 rounded font-bold text-[15px] uppercase tracking-wide bg-rust text-white hover:bg-opacity-90 transition-all"
             >
               Call Now
             </a>
@@ -180,19 +179,19 @@ export default function Home() {
               href="https://wa.me/2348031234567"
               target="_blank"
               rel="noopener noreferrer"
-              className="flex-1 flex items-center justify-center gap-2 px-5 py-[15px] rounded font-bold text-[15px] uppercase tracking-wide bg-hazard text-white hover:bg-opacity-90 transition-all"
+              className="flex-1 flex items-center justify-center gap-2 px-5 py-3.75 rounded font-bold text-[15px] uppercase tracking-wide bg-hazard text-white hover:bg-opacity-90 transition-all"
             >
               WhatsApp Us
             </a>
             <a
               href="#contact"
-              className="flex-1 flex items-center justify-center gap-2 px-5 py-[15px] rounded font-bold text-[15px] uppercase tracking-wide bg-transparent text-concrete border-[1.5px] border-[#4A4A46] hover:border-line transition-all"
+              className="flex-1 flex items-center justify-center gap-2 px-5 py-3.75 rounded font-bold text-[15px] uppercase tracking-wide bg-transparent text-concrete border-[1.5px] border-steel hover:border-line transition-all"
             >
               Get Directions
             </a>
           </div>
 
-          <div className="grid grid-cols-3 md:max-w-[420px] border-t border-[#333330] mt-9 pt-6">
+          <div className="grid grid-cols-3 md:max-w-105 border-t border-[#333330] mt-9 pt-6">
             <div className="text-center border-r border-[#333330]">
               <div className="font-display font-black text-2xl text-hazard">
                 <AnimatedCounter end={5} suffix="+" />
@@ -223,7 +222,7 @@ export default function Home() {
 
       {/* Services */}
       <section id="services" className="py-11">
-        <div className="max-w-[1120px] mx-auto px-5">
+        <div className="max-w-280 mx-auto px-5">
           <div className="text-xs font-bold text-rust uppercase tracking-widest mb-2">
             What We Fix
           </div>
@@ -237,9 +236,9 @@ export default function Home() {
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-3.5">
             <div className="bg-panel border border-line rounded overflow-hidden shadow-sm hover:shadow-md transition-shadow">
-              <div className="relative aspect-[16/10] bg-[#D8D3C6] overflow-hidden">
+              <div className="relative aspect-16/10 bg-[#D8D3C6] overflow-hidden">
                 <Image
-                  src="/images/engine_diag.jpeg"
+                  src="/images/open_car.webp"
                   alt="Engine Diagnostics & Repair"
                   fill
                   sizes="(max-w-768px) 100vw, 33vw"
@@ -267,9 +266,9 @@ export default function Home() {
               className="bg-panel border border-line rounded overflow-hidden shadow-sm hover:shadow-md transition-shadow"
               ref={servicesRef}
             >
-              <div className="relative aspect-[16/10] bg-[#D8D3C6] overflow-hidden">
+              <div className="relative aspect-16/10 bg-[#D8D3C6] overflow-hidden">
                 <Image
-                  src="/images/transmission.jpeg"
+                  src="/images/under_hood.jpg"
                   alt="Transmission Repair"
                   fill
                   sizes="(max-width-768px) 100vw, 33vw"
@@ -295,7 +294,7 @@ export default function Home() {
             </div>
 
             {/* <div className="bg-panel border border-line rounded overflow-hidden shadow-sm hover:shadow-md transition-shadow">
-              <div className="relative aspect-[16/10] bg-[#D8D3C6] overflow-hidden">
+              <div className="relative aspect-16/10 bg-[#D8D3C6] overflow-hidden">
                 <Image
                   src="/images/brake_service.png"
                   alt="Brake Service"
@@ -322,7 +321,7 @@ export default function Home() {
             </div>
 
             <div className="bg-panel border border-line rounded overflow-hidden shadow-sm hover:shadow-md transition-shadow">
-              <div className="relative aspect-[16/10] bg-[#D8D3C6] overflow-hidden">
+              <div className="relative aspect-16/10 bg-[#D8D3C6] overflow-hidden">
                 <Image
                   src="/images/ac_service.png"
                   alt="AC Servicing"
@@ -348,9 +347,9 @@ export default function Home() {
             </div> */}
 
             <div className="bg-panel border border-line rounded overflow-hidden shadow-sm hover:shadow-md transition-shadow">
-              <div className="relative aspect-[16/10] bg-[#D8D3C6] overflow-hidden">
+              <div className="relative aspect-16/10 bg-[#D8D3C6] overflow-hidden">
                 <Image
-                  src="/images/electric_repairs.jpeg"
+                  src="/images/car_detailing.jpg"
                   alt="Electrical Repairs"
                   fill
                   sizes="(max-width-768px) 100vw, 33vw"
@@ -360,10 +359,11 @@ export default function Home() {
               </div>
               <div className="p-4">
                 <h3 className="text-base font-extrabold mb-1.5">
-                  Electrical Repairs
+                  Car Wash & Detailing
                 </h3>
                 <p className="text-[13.5px] text-steel mb-2.5">
-                  Battery, alternator, wiring faults, dashboard warning lights.
+                  Full exterior wash and wax, interior vacuuming and trim
+                  detail.
                 </p>
                 <a
                   href="#contact"
@@ -374,8 +374,8 @@ export default function Home() {
               </div>
             </div>
 
-            <div className="bg-panel border border-line rounded overflow-hidden shadow-sm hover:shadow-md transition-shadow">
-              <div className="relative aspect-[16/10] bg-[#D8D3C6] overflow-hidden">
+            {/* <div className="bg-panel border border-line rounded overflow-hidden shadow-sm hover:shadow-md transition-shadow">
+              <div className="relative aspect-16/10 bg-[#D8D3C6] overflow-hidden">
                 <Image
                   src="/images/alignment.jpeg"
                   alt="Suspension & Alignment"
@@ -399,14 +399,22 @@ export default function Home() {
                   Book service →
                 </a>
               </div>
-            </div>
+            </div> */}
+          </div>
+          <div className="mt-6">
+            <a
+              href="/services"
+              className="inline-block px-6 py-3 bg-rust text-white font-bold text-[14px] uppercase tracking-wide rounded hover:bg-opacity-90 transition-all"
+            >
+              See All Services
+            </a>
           </div>
         </div>
       </section>
 
       {/* Trust bar */}
       <div className="bg-panel border-t border-b border-line py-6">
-        <div className="max-w-[1120px] mx-auto px-5 flex flex-col md:flex-row md:justify-between md:items-center gap-4">
+        <div className="max-w-280 mx-auto px-5 flex flex-col md:flex-row md:justify-between md:items-center gap-4">
           <div className="flex items-center gap-2.5">
             <span className="text-hazard text-lg tracking-[2px]">★★★★★</span>
             <span className="font-extrabold text-base">4.9</span>
@@ -422,7 +430,7 @@ export default function Home() {
 
       {/* About */}
       <section id="about" className="py-11">
-        <div className="max-w-[1120px] mx-auto px-5">
+        <div className="max-w-280 mx-auto px-5">
           <div className="text-xs font-bold text-rust uppercase tracking-widest mb-2">
             Why Chase
           </div>
@@ -443,7 +451,7 @@ export default function Home() {
 
       {/* Gallery */}
       <section id="gallery" className="py-11">
-        <div className="max-w-[1120px] mx-auto px-5">
+        <div className="max-w-280 mx-auto px-5">
           <div className="text-xs font-bold text-rust uppercase tracking-widest mb-2">
             Recent Work
           </div>
@@ -454,7 +462,7 @@ export default function Home() {
             {[1, 2, 3, 4, 5].map((i) => (
               <div
                 key={i}
-                className="relative flex-none w-[140px] h-[140px] rounded bg-[#D8D3C6] overflow-hidden shadow-sm hover:shadow-md transition-shadow"
+                className="relative flex-none w-35 h-35 rounded bg-[#D8D3C6] overflow-hidden shadow-sm hover:shadow-md transition-shadow"
               >
                 <Image
                   src={`/images/gallery_${i}.png`}
@@ -471,7 +479,7 @@ export default function Home() {
 
       {/* Contact */}
       <section id="contact" className="bg-charcoal text-concrete py-11">
-        <div className="max-w-[1120px] mx-auto px-5">
+        <div className="max-w-280 mx-auto px-5">
           <div className="text-xs font-bold text-hazard uppercase tracking-widest mb-2">
             Visit Us
           </div>
@@ -487,7 +495,7 @@ export default function Home() {
           <div className="flex flex-col md:flex-row gap-2.5 mt-5">
             <a
               href="tel:+2348031234567"
-              className="flex-1 flex items-center justify-center gap-2 px-5 py-[15px] rounded font-bold text-[15px] uppercase tracking-wide bg-rust text-white hover:bg-opacity-90 transition-all"
+              className="flex-1 flex items-center justify-center gap-2 px-5 py-3.75 rounded font-bold text-[15px] uppercase tracking-wide bg-rust text-white hover:bg-opacity-90 transition-all"
             >
               Call Now
             </a>
@@ -495,7 +503,7 @@ export default function Home() {
               href="https://wa.me/2348031234567"
               target="_blank"
               rel="noopener noreferrer"
-              className="flex-1 flex items-center justify-center gap-2 px-5 py-[15px] rounded font-bold text-[15px] uppercase tracking-wide bg-hazard text-white hover:bg-opacity-90 transition-all"
+              className="flex-1 flex items-center justify-center gap-2 px-5 py-3.75 rounded font-bold text-[15px] uppercase tracking-wide bg-hazard text-white hover:bg-opacity-90 transition-all"
             >
               Chat on WhatsApp
             </a>
@@ -503,13 +511,13 @@ export default function Home() {
               href="https://www.google.com/maps/search/?api=1&query=Chase+Automobiles+Oba+Sekumade+Road+Ikorodu+Lagos"
               target="_blank"
               rel="noopener noreferrer"
-              className="flex-1 flex items-center justify-center gap-2 px-5 py-[15px] rounded font-bold text-[15px] uppercase tracking-wide bg-transparent text-concrete border-[1.5px] border-[#4A4A46] hover:border-line transition-all"
+              className="flex-1 flex items-center justify-center gap-2 px-5 py-3.75 rounded font-bold text-[15px] uppercase tracking-wide bg-transparent text-concrete border-[1.5px] border-steel hover:border-line transition-all"
             >
               Open in Google Maps
             </a>
           </div>
 
-          <div className="mt-6 aspect-[16/9] bg-[#2A2A26] rounded overflow-hidden border border-[#333330]">
+          <div className="mt-6 aspect-video bg-[#2A2A26] rounded overflow-hidden border border-[#333330]">
             <iframe
               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3963.330789892914!2d3.500757873668018!3d6.605753493388172!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x103befce081b1c95%3A0x445f3505a2c36a9a!2sChase%20Automobile%20Services!5e0!3m2!1sen!2sng!4v1786965867621!5m2!1sen!2sng"
               width="100%"
@@ -524,7 +532,7 @@ export default function Home() {
         </div>
       </section>
 
-      <footer className="py-5 pb-[100px] md:pb-8 text-center text-xs text-steel">
+      <footer className="py-5 pb-25 md:pb-8 text-center text-xs text-steel">
         © 2026 Chase Automobiles. All rights reserved.
       </footer>
 
