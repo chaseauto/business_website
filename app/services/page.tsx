@@ -17,39 +17,39 @@ const services: Service[] = [
     title: "Engine Diagnostics & Repair",
     description:
       "Warning lights, rough idling, power loss — properly diagnosed, properly fixed.",
-    image: "/images/why_section.webp",
+    image: "/images/why_section.png",
   },
   {
     slug: "transmission-repair",
     title: "Transmission Repair",
     description:
       "Slipping gears, delayed shifts, unusual noise — full transmission service.",
-    image: "/images/under_hood.jpg",
+    image: "/images/under_hood.png",
   },
   {
     slug: "brake-service",
     title: "Brake Service",
     description: "Pads, rotors, fluid, and full brake system inspection.",
-    image: "/images/brake_service.png",
+    image: "/images/open_car.webp",
   },
   {
     slug: "ac-servicing",
     title: "AC Servicing",
     description: "Not cooling, strange smell, weak airflow — restored fast.",
-    image: "/images/ac_service.png",
+    image: "/images/ac_repairs.png",
   },
   {
     slug: "electrical-repairs",
     title: "Electrical Repairs",
     description:
       "Battery, alternator, wiring faults, dashboard warning lights.",
-    image: "/images/electrical.jpg",
+    image: "/images/electric_repairs.png",
   },
   {
     slug: "suspension-alignment",
     title: "Suspension & Alignment",
     description: "Smoother ride, even tire wear, better handling.",
-    image: "/images/alignment.jpeg",
+    image: "/images/suspension_service.png",
   },
   {
     slug: "car-wash-detailing",
@@ -366,6 +366,8 @@ export default function ServicesPage() {
                         src={service.image}
                         alt={service.title}
                         fill
+                        unoptimized
+                        quality={90}
                         sizes="(max-width: 1024px) 100vw, 50vw"
                         className="object-cover"
                       />
@@ -446,7 +448,7 @@ export default function ServicesPage() {
       <section className="relative overflow-hidden bg-charcoal text-concrete">
         <div className="absolute inset-0 opacity-20">
           <Image
-            src="/images/under_hood.jpg"
+            src="/images/under_hood.png"
             alt=""
             fill
             sizes="100vw"

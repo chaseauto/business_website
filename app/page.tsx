@@ -265,7 +265,7 @@ export default function Home() {
             <div className="bg-panel border border-line rounded overflow-hidden shadow-sm hover:shadow-md transition-shadow">
               <div className="relative aspect-16/10 bg-[#D8D3C6] overflow-hidden">
                 <Image
-                  src="/images/why_section.webp"
+                  src="/images/why_section.png"
                   alt="Engine Diagnostics & Repair"
                   fill
                   quality={95}
@@ -297,7 +297,7 @@ export default function Home() {
             >
               <div className="relative aspect-16/10 bg-[#D8D3C6] overflow-hidden">
                 <Image
-                  src="/images/under_hood.jpg"
+                  src="/images/under_hood.png"
                   alt="Transmission Repair"
                   fill
                   sizes="(max-width-768px) 100vw, 33vw"
