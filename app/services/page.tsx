@@ -72,7 +72,7 @@ const serviceDetails: Record<
   "engine-diagnostics-repair": {
     eyebrow: "01 / Engine",
     intro:
-      "When your engine isn't behaving properly, replacing parts at random is not a diagnosis. We inspect the system, identify the fault, and recommend the repair that actually addresses the problem.",
+      "We inspect the system, identify the fault, and recommend the repair that actually addresses the problem.",
     includes: [
       "Computer diagnostics",
       "Engine fault diagnosis",
@@ -94,7 +94,7 @@ const serviceDetails: Record<
   "transmission-repair": {
     eyebrow: "02 / Transmission",
     intro:
-      "Transmission problems rarely get better by themselves. We diagnose shifting problems and inspect the transmission before recommending service, repair, or replacement.",
+      "We diagnose shifting problems and inspect the transmission before recommending service, repair, or replacement.",
     includes: [
       "Transmission diagnostics",
       "Transmission fluid service",
@@ -116,7 +116,7 @@ const serviceDetails: Record<
   "brake-service": {
     eyebrow: "03 / Brakes",
     intro:
-      "Your braking system is not the place for guesswork. We inspect the components responsible for stopping your vehicle and identify worn or damaged parts before they become a bigger problem.",
+      "We inspect the components responsible for stopping your vehicle and identify worn or damaged parts before they become a bigger problem.",
     includes: [
       "Brake system inspection",
       "Brake pad replacement",
@@ -138,7 +138,7 @@ const serviceDetails: Record<
   "ac-servicing": {
     eyebrow: "04 / Climate Control",
     intro:
-      "A working AC system is not a luxury in Lagos. We diagnose cooling problems, airflow issues, leaks, and other faults to get your cabin comfortable again.",
+      "We diagnose cooling problems, airflow issues, leaks, and other faults to get your cabin comfortable again.",
     includes: [
       "AC system diagnostics",
       "Refrigerant service",
@@ -160,7 +160,7 @@ const serviceDetails: Record<
   "electrical-repairs": {
     eyebrow: "05 / Electrical",
     intro:
-      "Modern vehicles depend on dozens of electrical systems working together. We trace electrical faults instead of throwing batteries and parts at the problem.",
+      "We trace electrical faults instead of throwing batteries and parts at the problem.",
     includes: [
       "Electrical diagnostics",
       "Battery inspection",
@@ -182,7 +182,7 @@ const serviceDetails: Record<
   "suspension-alignment": {
     eyebrow: "06 / Suspension",
     intro:
-      "A good suspension system keeps your vehicle stable, comfortable, and predictable. We inspect suspension components and alignment issues affecting how your car drives.",
+      "We inspect suspension components and alignment issues affecting how your car drives.",
     includes: [
       "Suspension inspection",
       "Shock absorber inspection",
@@ -204,7 +204,7 @@ const serviceDetails: Record<
   "car-wash-detailing": {
     eyebrow: "07 / Detailing",
     intro:
-      "Mechanical work is only part of looking after your car. Our detailing service brings the exterior and interior back to a cleaner, sharper condition.",
+      "Our detailing service brings the exterior and interior back to a cleaner, sharper condition.",
     includes: [
       "Exterior wash",
       "Exterior wax",
@@ -366,7 +366,6 @@ export default function ServicesPage() {
                         src={service.image}
                         alt={service.title}
                         fill
-                        unoptimized
                         quality={90}
                         sizes="(max-width: 1024px) 100vw, 50vw"
                         className="object-cover"

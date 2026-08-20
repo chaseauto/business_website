@@ -269,7 +269,6 @@ export default function Home() {
                   alt="Engine Diagnostics & Repair"
                   fill
                   quality={95}
-                  unoptimized
                   sizes="(max-w-768px) 100vw, 33vw"
                   className="object-cover transition-transform duration-300 hover:scale-105"
                 />
@@ -302,7 +301,6 @@ export default function Home() {
                   fill
                   sizes="(max-width-768px) 100vw, 33vw"
                   quality={95}
-                  unoptimized
                   className="object-cover transition-transform duration-300 hover:scale-105"
                 />
               </div>
@@ -322,60 +320,6 @@ export default function Home() {
                 </a>
               </div>
             </div>
-
-            {/* <div className="bg-panel border border-line rounded overflow-hidden shadow-sm hover:shadow-md transition-shadow">
-              <div className="relative aspect-16/10 bg-[#D8D3C6] overflow-hidden">
-                <Image
-                  src="/images/brake_service.png"
-                  alt="Brake Service"
-                  fill
-                  sizes="(max-width-768px) 100vw, 33vw"
-                  quality={95}
-                  unoptimized
-                  className="object-cover transition-transform duration-300 hover:scale-105"
-                />
-              </div>
-              <div className="p-4">
-                <h3 className="text-base font-extrabold mb-1.5">
-                  Brake Service
-                </h3>
-                <p className="text-[13.5px] text-steel mb-2.5">
-                  Pads, rotors, fluid, and full brake system inspection.
-                </p>
-                <a
-                  href="#contact"
-                  className="text-[13px] font-bold text-rust hover:underline"
-                >
-                  Book service →
-                </a>
-              </div>
-            </div>
-
-            <div className="bg-panel border border-line rounded overflow-hidden shadow-sm hover:shadow-md transition-shadow">
-              <div className="relative aspect-16/10 bg-[#D8D3C6] overflow-hidden">
-                <Image
-                  src="/images/ac_service.png"
-                  alt="AC Servicing"
-                  fill
-                  sizes="(max-w-768px) 100vw, 33vw"
-                  className="object-cover transition-transform duration-300 hover:scale-105"
-                />
-              </div>
-              <div className="p-4">
-                <h3 className="text-base font-extrabold mb-1.5">
-                  AC Servicing
-                </h3>
-                <p className="text-[13.5px] text-steel mb-2.5">
-                  Not cooling, strange smell, weak airflow — restored fast.
-                </p>
-                <a
-                  href="#contact"
-                  className="text-[13px] font-bold text-rust hover:underline"
-                >
-                  Book service →
-                </a>
-              </div>
-            </div> */}
 
             <div className="bg-panel border border-line rounded overflow-hidden shadow-sm hover:shadow-md transition-shadow">
               <div className="relative aspect-16/10 bg-[#D8D3C6] overflow-hidden">
@@ -405,34 +349,6 @@ export default function Home() {
                 </a>
               </div>
             </div>
-
-            {/* <div className="bg-panel border border-line rounded overflow-hidden shadow-sm hover:shadow-md transition-shadow">
-              <div className="relative aspect-16/10 bg-[#D8D3C6] overflow-hidden">
-                <Image
-                  src="/images/alignment.jpeg"
-                  alt="Suspension & Alignment"
-                  fill
-                  sizes="(max-width-768px) 100vw, 33vw"
-                  quality={95}
-                  unoptimized
-                  className="object-cover transition-transform duration-300 hover:scale-105"
-                />
-              </div>
-              <div className="p-4">
-                <h3 className="text-base font-extrabold mb-1.5">
-                  Suspension &amp; Alignment
-                </h3>
-                <p className="text-[13.5px] text-steel mb-2.5">
-                  Smoother ride, even tire wear, better handling.
-                </p>
-                <a
-                  href="#contact"
-                  className="text-[13px] font-bold text-rust hover:underline"
-                >
-                  Book service →
-                </a>
-              </div>
-            </div> */}
           </div>
           <div className="mt-6">
             <a
