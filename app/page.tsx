@@ -3,6 +3,7 @@
 import { useEffect, useState, useRef } from "react";
 import { Menu } from "lucide-react";
 import Image from "next/image";
+import Link from "next/link";
 
 function AnimatedCounter({
   end,
@@ -134,26 +135,28 @@ export default function Home() {
       <nav className="bg-panel border-b border-line sticky top-0 z-50">
         <div className="max-w-280 mx-auto px-5 py-3.5 flex items-center justify-between">
           <div className="font-display font-black text-[19px] tracking-wide">
-            <Image
-              src="/images/chase_logo.png"
-              width="100"
-              height="100"
-              alt="Chase Logo"
-            />
+            <Link href="/">
+              <Image
+                src="/images/chase_logo.png"
+                width="100"
+                height="100"
+                alt="Chase Logo"
+              />
+            </Link>
           </div>
           <div className="hidden md:flex gap-7 text-sm font-semibold">
-            <a href="#services" className="hover:text-rust transition-colors">
+            <Link href="services" className="hover:text-rust transition-colors">
               Services
-            </a>
-            <a href="#about" className="hover:text-rust transition-colors">
+            </Link>
+            <Link href="about" className="hover:text-rust transition-colors">
               About
-            </a>
-            <a href="#gallery" className="hover:text-rust transition-colors">
+            </Link>
+            <Link href="gallery" className="hover:text-rust transition-colors">
               Gallery
-            </a>
-            <a href="#contact" className="hover:text-rust transition-colors">
+            </Link>
+            <Link href="contact" className="hover:text-rust transition-colors">
               Contact
-            </a>
+            </Link>
           </div>
 
           <button className="md:hidden">
@@ -476,7 +479,7 @@ export default function Home() {
         <div className="relative z-10 mx-auto max-w-7xl px-5">
           <div className="max-w-2xl">
             <div className="mb-3 text-sm font-bold uppercase tracking-[0.2em] text-rust">
-              Why Chase
+              Why Chase?
             </div>
 
             <h2 className="mb-4 font-display text-3xl font-extrabold uppercase leading-tight md:text-4xl">
