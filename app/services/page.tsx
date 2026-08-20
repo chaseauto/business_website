@@ -1,8 +1,8 @@
 "use client";
 
 import Image from "next/image";
-import Link from "next/link";
-import { ArrowRight, Check, Menu } from "lucide-react";
+import { ArrowRight, Check } from "lucide-react";
+import Navbar from "../components/Navbar";
 
 type Service = {
   slug: string;
@@ -241,40 +241,7 @@ export default function ServicesPage() {
       </div>
 
       {/* Navigation */}
-      <nav className="bg-panel border-b border-line sticky top-0 z-50">
-        <div className="max-w-280 mx-auto px-5 py-3.5 flex items-center justify-between">
-          <Link href="/">
-            <Image
-              src="/images/chase_logo.png"
-              width={100}
-              height={100}
-              alt="Chase Automobiles"
-            />
-          </Link>
-
-          <div className="hidden md:flex gap-7 text-sm font-semibold">
-            <Link href="/services" className="text-rust transition-colors">
-              Services
-            </Link>
-
-            <Link href="/about" className="hover:text-rust transition-colors">
-              About
-            </Link>
-
-            <Link href="/gallery" className="hover:text-rust transition-colors">
-              Gallery
-            </Link>
-
-            <Link href="/contact" className="hover:text-rust transition-colors">
-              Contact
-            </Link>
-          </div>
-
-          <button className="md:hidden" aria-label="Open menu">
-            <Menu />
-          </button>
-        </div>
-      </nav>
+      <Navbar />
 
       {/* Hazard Stripe */}
       <div className="h-2 hazard-stripe" />

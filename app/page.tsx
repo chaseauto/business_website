@@ -1,9 +1,9 @@
 "use client";
 
 import { useEffect, useState, useRef } from "react";
-import { Menu } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
+import Navbar from "./components/Navbar";
 
 function AnimatedCounter({
   end,
@@ -132,38 +132,7 @@ export default function Home() {
       </div>
 
       {/* Nav */}
-      <nav className="bg-panel border-b border-line sticky top-0 z-50">
-        <div className="max-w-280 mx-auto px-5 py-3.5 flex items-center justify-between">
-          <div className="font-display font-black text-[19px] tracking-wide">
-            <Link href="/">
-              <Image
-                src="/images/chase_logo.png"
-                width="100"
-                height="100"
-                alt="Chase Logo"
-              />
-            </Link>
-          </div>
-          <div className="hidden md:flex gap-7 text-sm font-semibold">
-            <Link href="services" className="hover:text-rust transition-colors">
-              Services
-            </Link>
-            <Link href="about" className="hover:text-rust transition-colors">
-              About
-            </Link>
-            <Link href="gallery" className="hover:text-rust transition-colors">
-              Gallery
-            </Link>
-            <Link href="contact" className="hover:text-rust transition-colors">
-              Contact
-            </Link>
-          </div>
-
-          <button className="md:hidden">
-            <Menu />
-          </button>
-        </div>
-      </nav>
+      <Navbar />
 
       {/* Signature hazard stripe */}
       <div className="h-2 hazard-stripe"></div>
