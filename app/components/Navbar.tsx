@@ -36,16 +36,20 @@ export default function Navbar() {
     <>
       <nav className="bg-panel border-b border-line sticky top-0 z-50">
         <div className="max-w-280 mx-auto px-5 py-3.5 flex items-center justify-between">
-          <div className="font-display font-black text-[19px] tracking-wide">
-            <Link href="/" onClick={() => setIsMobileMenuOpen(false)}>
-              <Image
-                src="/images/chase_logo.png"
-                width={100}
-                height={100}
-                alt="Chase Logo"
-              />
-            </Link>
-          </div>
+          <Link
+            href="/"
+            onClick={() => setIsMobileMenuOpen(false)}
+            className="flex h-10 w-30 shrink-0 items-center"
+          >
+            <Image
+              src="/images/chase_logo.png"
+              width={120}
+              height={40}
+              alt="Chase Logo"
+              className="h-10 w-auto object-contain"
+              priority
+            />
+          </Link>
 
           <div className="hidden md:flex gap-7 text-sm font-semibold">
             {navLinks.map(({ href, label }) => (
@@ -53,9 +57,7 @@ export default function Navbar() {
                 key={href}
                 href={href}
                 className={`transition-colors ${
-                  isActive(href)
-                    ? "text-hazard"
-                    : "hover:text-hazard"
+                  isActive(href) ? "text-hazard" : "hover:text-hazard"
                 }`}
               >
                 {label}
@@ -95,12 +97,17 @@ export default function Navbar() {
       >
         {/* Sidebar header */}
         <div className="flex items-center justify-between px-5 py-4 border-b border-line">
-          <Link href="/" onClick={() => setIsMobileMenuOpen(false)}>
+          <Link
+            href="/"
+            onClick={() => setIsMobileMenuOpen(false)}
+            className="flex h-10 w-30 shrink-0 items-center"
+          >
             <Image
               src="/images/chase_logo.png"
-              width={80}
-              height={80}
+              width={120}
+              height={40}
               alt="Chase Logo"
+              className="h-10 w-auto object-contain"
             />
           </Link>
           <button
