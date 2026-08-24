@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { Menu } from "lucide-react";
+
 import Image from "next/image";
 
 const serviceOptions = [
@@ -41,98 +41,57 @@ export default function ContactPage() {
 
   return (
     <>
-      {/* Info bar */}
-      <div className="bg-charcoal text-concrete text-[12.5px] font-medium">
-        <div className="max-w-280 mx-auto px-5 py-2.25 flex justify-between items-center gap-3 flex-wrap">
-          <span className="opacity-90">
-            10/11 Chief Jamiu, Elepe Royal Estate, Aga, Lagos
-          </span>
-          <span className="text-hazard font-bold uppercase text-[11px] tracking-wide">
-            Open Now · Closes 7PM
-          </span>
+      {/* Hero */}
+      <section className="relative overflow-hidden bg-charcoal text-concrete">
+        <div className="absolute inset-0">
+          <Image
+            src="/images/suspension_service.png"
+            alt="Chase Automobiles Contact"
+            fill
+            priority
+            sizes="100vw"
+            className="object-cover opacity-50"
+          />
+          <div className="absolute inset-0 bg-linear-to-r from-charcoal via-charcoal/95 to-charcoal/20" />
+          <div className="absolute inset-0 bg-linear-to-t from-charcoal via-transparent to-charcoal/40" />
         </div>
-      </div>
 
-      {/* Nav */}
-      <nav className="bg-panel border-b border-line sticky top-0 z-50">
-        <div className="max-w-280 mx-auto px-5 py-3.5 flex items-center justify-between">
-          <a
-            href="/"
-            className="font-display font-black text-[19px] tracking-wide"
-          >
-            <Image
-              src="/images/chase_logo.png"
-              width="100"
-              height="100"
-              alt="Chase Logo"
-            />
-          </a>
-          <div className="hidden md:flex gap-7 text-sm font-semibold">
-            <a href="/services" className="hover:text-rust transition-colors">
-              Services
-            </a>
-            <a href="/#about" className="hover:text-rust transition-colors">
-              About
-            </a>
-            <a href="/#gallery" className="hover:text-rust transition-colors">
-              Gallery
-            </a>
-            <a href="/contact" className="text-rust">
-              Contact
-            </a>
-          </div>
+        <div className="relative z-10 max-w-280 mx-auto px-5 py-20 md:py-28">
+          <div className="max-w-3xl">
+            <h1 className="font-display font-black uppercase leading-[1.05] text-[42px] sm:text-[56px] md:text-[72px]">
+              Call, message,
+              <br />
+              <span className="text-hazard">or drive in.</span>
+            </h1>
 
-          <button className="md:hidden">
-            <Menu />
-          </button>
-        </div>
-      </nav>
+            <p className="mt-6 text-[16px] md:text-[17px] leading-relaxed text-[#C9C6BE] max-w-[58ch]">
+              Whatever's wrong with the car, the fastest way to sort it is to
+              reach us directly. We inspect, diagnose, and explain before any
+              work begins.
+            </p>
 
-      {/* Signature hazard stripe */}
-      <div className="h-2 hazard-stripe"></div>
-
-      {/* Page header */}
-      <header className="relative py-12 md:py-14 bg-charcoal text-concrete overflow-hidden">
-        <div className="relative z-10 max-w-280 mx-auto px-5">
-          <div className="text-xs font-bold text-hazard uppercase tracking-widest mb-2">
-            Get In Touch
-          </div>
-          <h1 className="font-display font-black uppercase leading-[1.1] text-[30px] sm:text-[38px] md:text-[44px] max-w-[18ch]">
-            Call, message, or drive in.
-          </h1>
-          <p className="mt-3 text-[15px] text-[#C9C6BE] max-w-[52ch]">
-            Whatever's wrong with the car, the fastest way to sort it is to
-            reach us directly.
-          </p>
-        </div>
-      </header>
-
-      {/* Primary actions — call / whatsapp / directions */}
-      <section className="py-9 border-b border-line">
-        <div className="max-w-280 mx-auto px-5">
-          <div className="flex flex-col md:flex-row gap-2.5">
-            <a
-              href="tel:+2348031234567"
-              className="flex-1 flex items-center justify-center gap-2 px-5 py-4 rounded font-bold text-[16px] uppercase tracking-wide bg-rust text-white hover:bg-opacity-90 transition-all"
-            >
-              Call +234 803 123 4567
-            </a>
-            <a
-              href="https://wa.me/2348031234567"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex-1 flex items-center justify-center gap-2 px-5 py-4 rounded font-bold text-[16px] uppercase tracking-wide bg-hazard text-charcoal hover:bg-opacity-90 transition-all"
-            >
-              Chat on WhatsApp
-            </a>
-            <a
-              href="https://www.google.com/maps/search/?api=1&query=Chase+Automobiles+Oba+Sekumade+Road+Ikorodu+Lagos"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex-1 flex items-center justify-center gap-2 px-5 py-4 rounded font-bold text-[16px] uppercase tracking-wide bg-transparent text-charcoal border-[1.5px] border-charcoal hover:bg-charcoal hover:text-concrete transition-all"
-            >
-              Get Directions
-            </a>
+            <div className="flex flex-col md:flex-row gap-2.5 mt-8 max-w-175">
+              <a
+                href="tel:+2348031234567"
+                className="flex-1 flex items-center justify-center gap-2 px-5 py-3.75 rounded font-bold text-[15px] uppercase tracking-wide bg-rust text-white hover:bg-opacity-90 transition-all"
+              >
+                Call Now
+              </a>
+              <a
+                href="https://wa.me/2348031234567"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex-1 flex items-center justify-center gap-2 px-5 py-3.75 rounded font-bold text-[15px] uppercase tracking-wide bg-hazard text-white hover:bg-opacity-90 transition-all"
+              >
+                WhatsApp Us
+              </a>
+              <a
+                href="#contact"
+                className="flex-1 flex items-center justify-center gap-2 px-5 py-3.75 rounded font-bold text-[15px] uppercase tracking-wide bg-transparent text-concrete border-[1.5px] border-steel hover:border-line transition-all"
+              >
+                Get Directions
+              </a>
+            </div>
           </div>
         </div>
       </section>
@@ -150,7 +109,7 @@ export default function ContactPage() {
 
             <div className="relative aspect-16/10 bg-[#D8D3C6] rounded overflow-hidden mb-5">
               <Image
-                src="/images/hero-img.jpg"
+                src="/images/truck.png"
                 alt="Chase Automobiles workshop exterior"
                 fill
                 quality={95}

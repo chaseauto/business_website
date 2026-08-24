@@ -3,7 +3,7 @@
 import { useEffect, useState, useRef } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import Navbar from "./components/Navbar";
+
 
 function AnimatedCounter({
   end,
@@ -120,22 +120,7 @@ export default function Home() {
 
   return (
     <>
-      <div className="bg-charcoal text-concrete text-[12.5px] font-medium">
-        <div className="max-w-280 mx-auto px-5 py-2.25 flex justify-between items-center gap-3 flex-wrap">
-          <span className="opacity-90">
-            10/11 Chief Jamiu, Elepe Royal Estate, Aga, Lagos
-          </span>
-          <span className="text-hazard font-bold uppercase text-[11px] tracking-wide">
-            Open Now · Closes 7PM
-          </span>
-        </div>
-      </div>
 
-      {/* Nav */}
-      <Navbar />
-
-      {/* Signature hazard stripe */}
-      <div className="h-2 hazard-stripe"></div>
 
       {/* Hero */}
       {/* Hero */}

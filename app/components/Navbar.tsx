@@ -76,15 +76,15 @@ export default function Navbar() {
               <Image
                 src="/images/x-icon.png"
                 alt="Close"
-                width={20}
-                height={20}
+                width={30}
+                height={30}
               />
             ) : (
               <Image
                 src="/images/hamburger.png"
                 alt="Open"
-                width={20}
-                height={20}
+                width={30}
+                height={30}
               />
             )}
           </button>
@@ -132,8 +132,8 @@ export default function Navbar() {
             <Image
               src="/images/x-icon.png"
               alt="Close"
-              width={20}
-              height={20}
+              width={30}
+              height={30}
             />
           </button>
         </div>
@@ -151,11 +151,9 @@ export default function Navbar() {
                   : "hover:bg-line hover:text-hazard"
               }`}
             >
-              <span
-                className={`w-1.5 h-1.5 rounded-full ${
-                  isActive(href) ? "bg-hazard" : "bg-rust opacity-70"
-                }`}
-              />
+              {isActive(href) && (
+                <span className="w-1.5 h-1.5 rounded-full bg-hazard" />
+              )}
               {label}
             </Link>
           ))}

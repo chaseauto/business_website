@@ -1,8 +1,8 @@
 "use client";
 
 import Image from "next/image";
-import { ArrowRight, Check } from "lucide-react";
-import Navbar from "../components/Navbar";
+import { ArrowRight } from "lucide-react";
+
 
 type Service = {
   slug: string;
@@ -227,24 +227,7 @@ const serviceDetails: Record<
 export default function ServicesPage() {
   return (
     <main className="min-h-screen bg-concrete text-charcoal">
-      {/* Top Bar */}
-      <div className="bg-charcoal text-concrete text-[12.5px] font-medium">
-        <div className="max-w-280 mx-auto px-5 py-2.25 flex justify-between items-center gap-3 flex-wrap">
-          <span className="opacity-90">
-            10/11 Chief Jamiu, Elepe Royal Estate, Aga, Lagos
-          </span>
 
-          <span className="text-hazard font-bold uppercase text-[11px] tracking-wide">
-            Open Now · Closes 7PM
-          </span>
-        </div>
-      </div>
-
-      {/* Navigation */}
-      <Navbar />
-
-      {/* Hazard Stripe */}
-      <div className="h-2 hazard-stripe" />
 
       {/* Hero */}
       <section className="relative overflow-hidden bg-charcoal text-concrete">
@@ -363,10 +346,12 @@ export default function ServicesPage() {
                               key={item}
                               className="flex items-start gap-2 text-[13px] font-semibold"
                             >
-                              <Check
-                                size={15}
-                                strokeWidth={3}
-                                className="text-rust mt-0.5 shrink-0"
+                              <Image
+                                src="/images/wheel.png"
+                                alt="Wheel"
+                                width={15}
+                                height={15}
+                                className="mt-0.5 shrink-0 object-contain"
                               />
                               <span>{item}</span>
                             </div>
