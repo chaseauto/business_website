@@ -1,7 +1,6 @@
 "use client";
 
-import { useState } from "react";
-
+import { useEffect, useRef, useState } from "react";
 import Image from "next/image";
 
 const serviceOptions = [
@@ -17,6 +16,33 @@ const serviceOptions = [
 ];
 
 export default function ContactPage() {
+  const belowHeroRef = useRef<HTMLDivElement | null>(null);
+  const footerRef = useRef<HTMLElement | null>(null);
+  const [isHeroPast, setIsHeroPast] = useState(false);
+  const [isFooterVisible, setIsFooterVisible] = useState(false);
+
+  useEffect(() => {
+    const heroObs = new IntersectionObserver(
+      ([entry]) => {
+        setIsHeroPast(entry.isIntersecting || entry.boundingClientRect.top < 0);
+      },
+      { threshold: 0.1 },
+    );
+    if (belowHeroRef.current) heroObs.observe(belowHeroRef.current);
+    return () => heroObs.disconnect();
+  }, []);
+
+  useEffect(() => {
+    const footerObs = new IntersectionObserver(
+      ([entry]) => setIsFooterVisible(entry.isIntersecting),
+      { threshold: 0.05 },
+    );
+    if (footerRef.current) footerObs.observe(footerRef.current);
+    return () => footerObs.disconnect();
+  }, []);
+
+  const showStickyBar = isHeroPast && !isFooterVisible;
+
   const [form, setForm] = useState({
     name: "",
     phone: "",
@@ -154,7 +180,10 @@ export default function ContactPage() {
           </div>
 
           <div>
-            <div className="w-full aspect-16/10 md:aspect-auto md:h-full min-h-75 bg-[#D8D3C6] rounded overflow-hidden border border-line">
+            <div
+              className="w-full aspect-16/10 md:aspect-auto md:h-full min-h-75 bg-[#D8D3C6] rounded overflow-hidden border border-line"
+              ref={belowHeroRef}
+            >
               <iframe
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3963.330789892914!2d3.500757873668018!3d6.605753493388172!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x103befce081b1c95%3A0x445f3505a2c36a9a!2sChase%20Automobile%20Services!5e0!3m2!1sen!2sng!4v1786965867621!5m2!1sen!2sng"
                 width="100%"
@@ -306,12 +335,21 @@ export default function ContactPage() {
         </div>
       </section>
 
-      <footer className="py-5 pb-8 md:pb-8 text-center text-sm text-steel">
+      <footer
+        ref={footerRef}
+        className="py-5 pb-8 md:pb-8 text-center text-sm text-steel"
+      >
         © 2026 Chase Automobiles. All rights reserved.
       </footer>
 
       {/* Sticky mobile action bar */}
-      <div className="md:hidden fixed bottom-0 left-0 right-0 flex bg-charcoal shadow-[0_-4px_14px_rgba(0,0,0,0.25)] z-60">
+      <div
+        className={`md:hidden fixed bottom-0 left-0 right-0 flex bg-charcoal shadow-[0_-4px_14px_rgba(0,0,0,0.25)] z-60 transition-all duration-300 ${
+          showStickyBar
+            ? "translate-y-0 opacity-100"
+            : "translate-y-full opacity-0 pointer-events-none"
+        }`}
+      >
         <a
           href="tel:+2348031234567"
           className="flex-1 flex flex-col items-center justify-center gap-0.5 py-2.5 pb-3.5 text-[11px] font-bold uppercase tracking-wide text-concrete border-r border-[#333330] bg-rust hover:bg-opacity-95 transition-all"
