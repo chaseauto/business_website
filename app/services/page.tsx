@@ -414,7 +414,7 @@ export default function ServicesPage() {
       <section className="relative overflow-hidden bg-charcoal text-concrete">
         <div className="absolute inset-0 opacity-20">
           <Image
-            src="/images/under_hood.png"
+            src="/images/yellow_car.jpg"
             alt=""
             fill
             sizes="100vw"
@@ -422,7 +422,7 @@ export default function ServicesPage() {
           />
         </div>
 
-        <div className="absolute inset-0 bg-charcoal/85" />
+        <div className="absolute inset-0 bg-charcoal/65" />
 
         <div className="relative z-10 max-w-280 mx-auto px-5 py-18 md:py-24">
           <div className="max-w-3xl">

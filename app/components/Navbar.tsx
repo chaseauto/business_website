@@ -72,7 +72,21 @@ export default function Navbar() {
             aria-expanded={isMobileMenuOpen}
             onClick={() => setIsMobileMenuOpen((o) => !o)}
           >
-            {isMobileMenuOpen ? <X size={22} /> : <Menu size={22} />}
+            {isMobileMenuOpen ? (
+              <Image
+                src="/images/x-icon.png"
+                alt="Close"
+                width={20}
+                height={20}
+              />
+            ) : (
+              <Image
+                src="/images/hamburger.png"
+                alt="Open"
+                width={20}
+                height={20}
+              />
+            )}
           </button>
         </div>
       </nav>
@@ -115,7 +129,12 @@ export default function Navbar() {
             aria-label="Close menu"
             onClick={() => setIsMobileMenuOpen(false)}
           >
-            <X size={20} />
+            <Image
+              src="/images/x-icon.png"
+              alt="Close"
+              width={20}
+              height={20}
+            />
           </button>
         </div>
 

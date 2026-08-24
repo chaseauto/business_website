@@ -368,7 +368,7 @@ export default function Home() {
             </div>
 
             <h2 className="mb-4 font-display text-3xl font-extrabold uppercase leading-tight md:text-4xl">
-              Precision work. <br />
+              Great work. <br />
               <span className="text-hazard">No guesswork.</span>
             </h2>
 
