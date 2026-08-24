@@ -21,7 +21,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
             </span>
           </div>
           {/* Open Now side */}
-          <div className="bg-charcoal text-hazard py-3 px-6 sm:px-12 flex items-center justify-center whitespace-nowrap">
+          <div className="bg-charcoal text-hazard py-3 px-6 sm:px-12 flex items-center justify-center">
             <span className="font-bold uppercase text-[11px] tracking-wide">
               Open Now · Closes 7PM
             </span>
