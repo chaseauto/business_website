@@ -133,7 +133,7 @@ export default function ContactPage() {
                   Mon–Fri
                 </span>
                 <span className="text-[13.5px] font-semibold">
-                  8:00 AM – 7:00 PM
+                  8:00 AM – 6:00 PM
                 </span>
               </div>
               <div className="flex justify-between items-center px-4 py-3 border-b border-line bg-panel">
@@ -141,7 +141,7 @@ export default function ContactPage() {
                   Saturday
                 </span>
                 <span className="text-[13.5px] font-semibold">
-                  8:00 AM – 5:00 PM
+                  8:00 AM – 2:00 PM
                 </span>
               </div>
               <div className="flex justify-between items-center px-4 py-3 bg-panel">
