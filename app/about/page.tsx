@@ -71,7 +71,7 @@ export default function AboutPage() {
         <div className="max-w-280 mx-auto px-5 grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
           <div className="relative aspect-4/3 bg-[#D8D3C6] rounded overflow-hidden order-2 md:order-1">
             <Image
-              src="/images/hero-img.jpg"
+              src="/images/another-hero.png"
               alt="Inside Chase Automobiles workshop"
               fill
               quality={95}
