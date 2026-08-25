@@ -226,7 +226,7 @@ export default function ContactPage() {
               Send Us a Quick Enquiry
             </h2>
             <p className="text-[#C9C6BE] text-[14.5px] mb-7">
-              Tell us what's going on with the car — we'll get back to you by
+              Tell us what's going on with the car and we'll get back to you by
               phone or WhatsApp, usually within the hour during opening times.
             </p>
 

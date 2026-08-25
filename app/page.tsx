@@ -4,7 +4,6 @@ import { useEffect, useState, useRef } from "react";
 import Image from "next/image";
 import Link from "next/link";
 
-
 function AnimatedCounter({
   end,
   duration = 1500,
@@ -120,8 +119,6 @@ export default function Home() {
 
   return (
     <>
-
-
       {/* Hero */}
       {/* Hero */}
 
@@ -278,7 +275,7 @@ export default function Home() {
             <div className="bg-panel border border-line rounded overflow-hidden shadow-sm hover:shadow-md transition-shadow">
               <div className="relative aspect-16/10 bg-[#D8D3C6] overflow-hidden">
                 <Image
-                  src="/images/car_detailing.jpg"
+                  src="/images/car_polishing.jpg"
                   alt="Electrical Repairs"
                   fill
                   sizes="(max-width-768px) 100vw, 33vw"

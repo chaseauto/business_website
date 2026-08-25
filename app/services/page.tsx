@@ -4,7 +4,6 @@ import { useEffect, useRef, useState } from "react";
 import Image from "next/image";
 import { ArrowRight } from "lucide-react";
 
-
 type Service = {
   slug: string;
   title: string;
@@ -37,7 +36,7 @@ const services: Service[] = [
     slug: "ac-servicing",
     title: "AC Servicing",
     description: "Not cooling, strange smell, weak airflow — restored fast.",
-    image: "/images/ac_repairs.png",
+    image: "/images/ac-repairs.png",
   },
   {
     slug: "electrical-repairs",
@@ -53,11 +52,32 @@ const services: Service[] = [
     image: "/images/suspension_service.png",
   },
   {
-    slug: "car-wash-detailing",
-    title: "Car Wash & Detailing",
+    slug: "car-polishing",
+    title: "Car Wash & Polishing",
     description:
       "Full exterior wash and wax, interior vacuuming and trim detail.",
-    image: "/images/car_detailing.jpg",
+    image: "/images/car_polishing.jpg",
+  },
+  {
+    slug: "car-rentals",
+    title: "Car Rentals",
+    description:
+      "Clean, well-maintained vehicles available for daily, weekly, or extended hire across Lagos.",
+    image: "/images/car_rentals.jpg",
+  },
+  {
+    slug: "car-towing",
+    title: "Car Towing",
+    description:
+      "Broke down or in an accident? We'll get your vehicle moved quickly and safely.",
+    image: "/images/car-towing.png",
+  },
+  {
+    slug: "equipment-leasing",
+    title: "Equipment Leasing",
+    description:
+      "Heavy-duty equipment and machinery available for short and long-term lease.",
+    image: "/images/under_hood.png",
   },
 ];
 
@@ -202,25 +222,91 @@ const serviceDetails: Record<
     ],
   },
 
-  "car-wash-detailing": {
+  "car-polishing": {
     eyebrow: "07 / Detailing",
     intro:
-      "Our detailing service brings the exterior and interior back to a cleaner, sharper condition.",
+      "Our detailing service brings the exterior and interior back to a cleaner, sharper condition — from paint to trim.",
     includes: [
-      "Exterior wash",
-      "Exterior wax",
+      "Full exterior wash",
+      "Paint waxing & polishing",
       "Interior vacuuming",
       "Interior trim cleaning",
-      "Dashboard cleaning",
+      "Dashboard & console cleaning",
       "General vehicle detailing",
     ],
     symptoms: [
       "Dirty exterior",
-      "Dull paint",
+      "Dull or faded paint",
       "Dusty interior",
-      "Dirty trim",
+      "Grimy trim",
       "Stained surfaces",
       "Vehicle needs a refresh",
+    ],
+  },
+
+  "car-rentals": {
+    eyebrow: "08 / Rentals",
+    intro:
+      "Need a vehicle for the day, the week, or longer? We offer clean, well-maintained cars available for short and extended hire.",
+    includes: [
+      "Daily car hire",
+      "Weekly rental packages",
+      "Extended rental options",
+      "Airport & city pick-up",
+      "Driver-assisted hire",
+      "Flexible booking",
+    ],
+    symptoms: [
+      "Car out for repairs",
+      "Travelling in Lagos",
+      "Need a temporary vehicle",
+      "Corporate hire",
+      "Airport transfers",
+      "Short-notice bookings",
+    ],
+  },
+
+  "car-towing": {
+    eyebrow: "09 / Towing",
+    intro:
+      "Broken down on the road or involved in an accident? We'll dispatch a tow and move your vehicle safely to our workshop or your chosen location.",
+    includes: [
+      "Emergency towing",
+      "Accident recovery",
+      "Breakdown towing",
+      "Workshop-to-workshop transfer",
+      "City & highway coverage",
+      "Safe vehicle handling",
+    ],
+    symptoms: [
+      "Car broke down",
+      "Won't start at all",
+      "Accident damage",
+      "Severe mechanical fault",
+      "Vehicle immobilised",
+      "Stuck on the road",
+    ],
+  },
+
+  "equipment-leasing": {
+    eyebrow: "10 / Leasing",
+    intro:
+      "We offer flexible lease arrangements for heavy-duty equipment and vehicles, suited to construction, logistics, and business operations.",
+    includes: [
+      "Short-term equipment lease",
+      "Long-term lease packages",
+      "Heavy machinery hire",
+      "Commercial vehicle leasing",
+      "Flexible lease terms",
+      "Maintenance-inclusive options",
+    ],
+    symptoms: [
+      "Need equipment short-term",
+      "Project-based hire",
+      "Avoid large capital spend",
+      "Construction project",
+      "Logistics operation",
+      "Business fleet needs",
     ],
   },
 };
@@ -255,8 +341,6 @@ export default function ServicesPage() {
 
   return (
     <main className="min-h-screen bg-concrete text-charcoal">
-
-
       {/* Hero */}
       <section className="relative overflow-hidden bg-charcoal text-concrete">
         <div className="absolute inset-0">
@@ -599,7 +683,10 @@ export default function ServicesPage() {
       </section>
 
       {/* Footer */}
-      <footer ref={footerRef} className="py-6 text-center text-sm text-steel bg-concrete">
+      <footer
+        ref={footerRef}
+        className="py-6 text-center text-sm text-steel bg-concrete"
+      >
         © 2026 Chase Automobiles. All rights reserved.
       </footer>
 
