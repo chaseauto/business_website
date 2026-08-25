@@ -76,7 +76,7 @@ export default function ContactPage() {
             fill
             priority
             sizes="100vw"
-            className="object-cover opacity-50"
+            className="object-cover opacity-60"
           />
           <div className="absolute inset-0 bg-linear-to-r from-charcoal via-charcoal/95 to-charcoal/20" />
           <div className="absolute inset-0 bg-linear-to-t from-charcoal via-transparent to-charcoal/40" />
@@ -198,22 +198,6 @@ export default function ContactPage() {
           </div>
         </div>
       </section>
-
-      {/* Trust bar */}
-      <div className="bg-panel border-t border-b border-line py-6">
-        <div className="max-w-280 mx-auto px-5 flex flex-col md:flex-row md:justify-between md:items-center gap-4">
-          <div className="flex items-center gap-2.5">
-            <span className="text-hazard text-lg tracking-[2px]">★★★★★</span>
-            <span className="font-extrabold text-base">4.9</span>
-            <span className="text-[13px] text-steel">
-              from 180+ Google reviews
-            </span>
-          </div>
-          <div className="text-[13px] font-bold text-steel uppercase tracking-wide">
-            Serving Ikorodu &amp; Lagos since 2022
-          </div>
-        </div>
-      </div>
 
       {/* Enquiry form */}
       <section className="bg-charcoal text-concrete py-12">

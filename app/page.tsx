@@ -317,13 +317,13 @@ export default function Home() {
         <div className="max-w-280 mx-auto px-5 flex flex-col md:flex-row md:justify-between md:items-center gap-4">
           <div className="flex items-center gap-2.5">
             <span className="text-hazard text-lg tracking-[2px]">★★★★★</span>
-            <span className="font-extrabold text-base">4.9</span>
+            <span className="font-extrabold text-base">5.0</span>
             <span className="text-[13px] text-steel">
-              from 180+ Google reviews
+              from 5+ Google reviews
             </span>
           </div>
           <div className="text-[13px] font-bold text-steel uppercase tracking-wide">
-            Serving Ikorodu &amp; Lagos since 2022
+            Serving Ikorodu &amp; Lagos since 2023
           </div>
         </div>
       </div>

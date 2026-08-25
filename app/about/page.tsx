@@ -1,6 +1,5 @@
 "use client";
 
-import { Menu } from "lucide-react";
 import Image from "next/image";
 
 const team = [
@@ -19,51 +18,53 @@ export default function AboutPage() {
     <>
       {/* Page header */}
       <header className="relative py-14 md:py-16 bg-charcoal text-concrete overflow-hidden">
+        <div className="absolute inset-0">
+          <Image
+            src="/images/about-hero.png"
+            alt="Chase Automobiles Workshop"
+            fill
+            priority
+            sizes="100vw"
+            className="object-cover opacity-55"
+          />
+          <div className="absolute inset-0 bg-linear-to-r from-charcoal via-charcoal/75 to-charcoal/20" />
+          <div className="absolute inset-0 bg-linear-to-t from-charcoal via-transparent to-charcoal/40" />
+        </div>
+
         <div className="relative z-10 max-w-280 mx-auto px-5">
-          <div className="text-xs font-bold text-hazard uppercase tracking-widest mb-2">
-            Why Chase
-          </div>
           <h1 className="font-display font-black uppercase leading-[1.1] text-[32px] sm:text-[40px] md:text-[48px] max-w-[18ch]">
-            Built on trust, <span className="text-hazard">not upsells.</span>
+            Built on trust, <span className="text-hazard">and excellence.</span>
           </h1>
           <p className="mt-4 text-[15px] text-[#C9C6BE] max-w-[52ch]">
-            [1–2 sentence founding story — who started Chase Automobiles, when,
-            and why. Replace with the real story.]
+            At Chase Automobile, we believe that your car deserves the best
+            care. That means honest service, expert workmanship, and attention
+            to every detail, so you can drive away with confidence knowing your
+            vehicle is in good hands.
           </p>
-        </div>
-      </header>
-
-      {/* Stats strip */}
-      <section className="py-8 border-b border-line bg-panel">
-        <div className="max-w-280 mx-auto px-5">
-          <div className="grid grid-cols-3 max-w-105 mx-auto md:mx-0">
-            <div className="text-center border-r border-line">
-              <div className="font-display font-black text-3xl text-rust">
-                5+
-              </div>
-              <div className="text-[10.5px] text-steel uppercase tracking-wide mt-1">
-                Years Running
-              </div>
-            </div>
-            <div className="text-center border-r border-line">
-              <div className="font-display font-black text-3xl text-rust">
-                1,000+
-              </div>
-              <div className="text-[10.5px] text-steel uppercase tracking-wide mt-1">
-                Vehicles Fixed
-              </div>
-            </div>
-            <div className="text-center">
-              <div className="font-display font-black text-3xl text-rust">
-                6+
-              </div>
-              <div className="text-[10.5px] text-steel uppercase tracking-wide mt-1">
-                Certified Mechanics
-              </div>
-            </div>
+          <div className="flex flex-col md:flex-row gap-2.5 mt-8 max-w-175">
+            <a
+              href="tel:+2348031234567"
+              className="flex-1 flex items-center justify-center gap-2 px-5 py-3.75 rounded font-bold text-[15px] uppercase tracking-wide bg-rust text-white hover:bg-opacity-90 transition-all"
+            >
+              Call Now
+            </a>
+            <a
+              href="https://wa.me/2348031234567"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex-1 flex items-center justify-center gap-2 px-5 py-3.75 rounded font-bold text-[15px] uppercase tracking-wide bg-hazard text-white hover:bg-opacity-90 transition-all"
+            >
+              WhatsApp Us
+            </a>
+            <a
+              href="#contact"
+              className="flex-1 flex items-center justify-center gap-2 px-5 py-3.75 rounded font-bold text-[15px] uppercase tracking-wide bg-transparent text-concrete border-[1.5px] border-steel hover:border-line transition-all"
+            >
+              Get Directions
+            </a>
           </div>
         </div>
-      </section>
+      </header>
 
       {/* Story */}
       <section className="py-12 md:py-16">
@@ -92,80 +93,7 @@ export default function AboutPage() {
               pricing, and direct communication, Chase Automobiles gives you
               confidence in every repair.
             </p>
-            <p className="text-[14.5px] text-steel leading-relaxed">
-              [Optional second paragraph — what sets Chase apart locally,
-              community involvement, or a specific standard the workshop holds
-              itself to.]
-            </p>
-          </div>
-        </div>
-      </section>
-
-      {/* Trust bar */}
-      <div className="bg-panel border-t border-b border-line py-6">
-        <div className="max-w-280 mx-auto px-5 flex flex-col md:flex-row md:justify-between md:items-center gap-4">
-          <div className="flex items-center gap-2.5">
-            <span className="text-hazard text-lg tracking-[2px]">★★★★★</span>
-            <span className="font-extrabold text-base">4.9</span>
-            <span className="text-[13px] text-steel">
-              from 180+ Google reviews
-            </span>
-          </div>
-          <div className="text-[13px] font-bold text-steel uppercase tracking-wide">
-            Serving Ikorodu &amp; Lagos since 2022
-          </div>
-        </div>
-      </div>
-
-      {/* Why choose us pillars */}
-      <section className="py-12 md:py-16">
-        <div className="max-w-280 mx-auto px-5">
-          <div className="text-xs font-bold text-rust uppercase tracking-widest mb-2">
-            What Makes Us Different
-          </div>
-          <h2 className="text-[26px] font-extrabold mb-8 font-display uppercase">
-            Why Choose Chase
-          </h2>
-
-          <div className="grid gap-px overflow-hidden rounded-xl bg-line md:grid-cols-3">
-            <div className="bg-panel p-6">
-              <span className="mb-5 block text-xs font-bold tracking-widest text-rust">
-                01
-              </span>
-              <h3 className="mb-2 font-display text-lg font-extrabold uppercase">
-                Accurate Diagnostics
-              </h3>
-              <p className="text-sm font-medium leading-relaxed text-steel">
-                We identify the actual problem before recommending a repair,
-                using modern diagnostic equipment and proven expertise.
-              </p>
-            </div>
-
-            <div className="bg-panel p-6">
-              <span className="mb-5 block text-xs font-bold tracking-widest text-rust">
-                02
-              </span>
-              <h3 className="mb-2 font-display text-lg font-extrabold uppercase">
-                Transparent Repairs
-              </h3>
-              <p className="text-sm font-medium leading-relaxed text-steel">
-                Clear explanations, honest recommendations, and transparent
-                pricing before the work begins. No unnecessary repairs.
-              </p>
-            </div>
-
-            <div className="bg-panel p-6">
-              <span className="mb-5 block text-xs font-bold tracking-widest text-rust">
-                03
-              </span>
-              <h3 className="mb-2 font-display text-lg font-extrabold uppercase">
-                Work We Stand Behind
-              </h3>
-              <p className="text-sm font-medium leading-relaxed text-steel">
-                Quality workmanship matters. We stand behind our repairs so you
-                can leave the workshop with confidence.
-              </p>
-            </div>
+            <p className="text-[14.5px] text-steel leading-relaxed"></p>
           </div>
         </div>
       </section>

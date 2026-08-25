@@ -46,10 +46,25 @@ const services: Service[] = [
     image: "/images/electric_repairs.png",
   },
   {
-    slug: "suspension-alignment",
-    title: "Suspension & Alignment",
-    description: "Smoother ride, even tire wear, better handling.",
+    slug: "wheel_balancing-alignment",
+    title: "Wheel-balancing & Alignment",
+    description:
+      "Laser wheel alignment, dynamic balancing, and vibration-free driving.",
     image: "/images/suspension_service.png",
+  },
+  {
+    slug: "suspension",
+    title: "Suspension",
+    description:
+      "Shocks, struts, bushings, ball joints — smoother ride and precision handling.",
+    image: "/images/suspension_service.png",
+  },
+  {
+    slug: "training",
+    title: "Training",
+    description:
+      "Practical, hands-on automotive diagnostics and mechanical engineering training.",
+    image: "/images/training.png",
   },
   {
     slug: "car-polishing",
@@ -70,14 +85,14 @@ const services: Service[] = [
     title: "Car Towing",
     description:
       "Broke down or in an accident? We'll get your vehicle moved quickly and safely.",
-    image: "/images/car-towing.png",
+    image: "/images/under_hood.png",
   },
   {
     slug: "equipment-leasing",
     title: "Equipment Leasing",
     description:
       "Heavy-duty equipment and machinery available for short and long-term lease.",
-    image: "/images/under_hood.png",
+    image: "/images/equipment_leasing.png",
   },
 ];
 
@@ -200,30 +215,74 @@ const serviceDetails: Record<
     ],
   },
 
-  "suspension-alignment": {
-    eyebrow: "06 / Suspension",
+  "wheel_balancing-alignment": {
+    eyebrow: "06 / Wheel & Tyre",
     intro:
-      "We inspect suspension components and alignment issues affecting how your car drives.",
+      "We use precision computerized alignment and dynamic balancing equipment to eliminate vibrations, restore straight-line stability, and protect your tyres from premature wear.",
     includes: [
-      "Suspension inspection",
-      "Shock absorber inspection",
-      "Steering component checks",
-      "Wheel alignment",
-      "Uneven tyre wear diagnosis",
-      "Handling problem diagnosis",
+      "Computerized 4-wheel alignment",
+      "Dynamic wheel balancing",
+      "Tyre tread & wear pattern analysis",
+      "Camber, caster & toe adjustments",
+      "Steering wheel centering",
+      "Vibration & high-speed pull diagnosis",
     ],
     symptoms: [
-      "Car pulling to one side",
-      "Uneven tyre wear",
-      "Bumpy or harsh ride",
-      "Steering vibration",
-      "Knocking sounds",
-      "Poor handling",
+      "Vehicle pulling to one side",
+      "Steering wheel vibrating at speed",
+      "Uneven or rapid tyre wear",
+      "Off-center steering wheel",
+      "Tyre squealing around corners",
+      "Rough rolling resistance",
+    ],
+  },
+
+  "suspension": {
+    eyebrow: "07 / Suspension",
+    intro:
+      "We inspect, repair, and replace worn suspension components to restore your car's ride comfort, stability, and road holding over bumps and uneven roads.",
+    includes: [
+      "Shock absorber & strut replacement",
+      "Control arm & bushing service",
+      "Ball joint & tie rod inspection",
+      "Sway bar link & mount repair",
+      "Coil spring & suspension mount checks",
+      "Full suspension health diagnostics",
+    ],
+    symptoms: [
+      "Bumpy or unusually harsh ride",
+      "Vehicle bouncing excessively",
+      "Knocking or clunking noises over bumps",
+      "Nose-diving during hard braking",
+      "Sagging or leaning on one side",
+      "Loose or imprecise steering feel",
+    ],
+  },
+
+  "training": {
+    eyebrow: "08 / Training",
+    intro:
+      "We offer hands-on automotive vocational training covering modern computer diagnostics, auto-electrical repairs, and mechanical systems for aspiring technicians and professionals.",
+    includes: [
+      "Modern computer diagnostics training",
+      "Auto-electrical & wiring systems",
+      "Engine overhaul & mechanical repair",
+      "Brake, AC & suspension servicing",
+      "Diagnostic scan tool mastery",
+      "Practical workshop apprenticeship",
+    ],
+    symptoms: [
+      "Aspiring auto technicians",
+      "Up-skilling existing mechanics",
+      "Practical workshop experience",
+      "Diagnostic scanner proficiency",
+      "Career in automotive engineering",
+      "Hands-on vehicle maintenance",
     ],
   },
 
   "car-polishing": {
-    eyebrow: "07 / Detailing",
+    eyebrow: "09 / Detailing",
     intro:
       "Our detailing service brings the exterior and interior back to a cleaner, sharper condition — from paint to trim.",
     includes: [
@@ -245,7 +304,7 @@ const serviceDetails: Record<
   },
 
   "car-rentals": {
-    eyebrow: "08 / Rentals",
+    eyebrow: "10 / Rentals",
     intro:
       "Need a vehicle for the day, the week, or longer? We offer clean, well-maintained cars available for short and extended hire.",
     includes: [
@@ -267,7 +326,7 @@ const serviceDetails: Record<
   },
 
   "car-towing": {
-    eyebrow: "09 / Towing",
+    eyebrow: "11 / Towing",
     intro:
       "Broken down on the road or involved in an accident? We'll dispatch a tow and move your vehicle safely to our workshop or your chosen location.",
     includes: [
@@ -289,7 +348,7 @@ const serviceDetails: Record<
   },
 
   "equipment-leasing": {
-    eyebrow: "10 / Leasing",
+    eyebrow: "12 / Leasing",
     intro:
       "We offer flexible lease arrangements for heavy-duty equipment and vehicles, suited to construction, logistics, and business operations.",
     includes: [
