@@ -1,19 +1,47 @@
 "use client";
 
+import { useEffect, useRef, useState } from "react";
 import Image from "next/image";
 
 const team = [
   {
     name: "[Name]",
-    role: "[Role — e.g. Lead Mechanic]",
-    image: "/images/team_1.jpg",
+    role: "[Role]",
+    image: "/images/placeholder.jpg",
   },
-  { name: "[Name]", role: "[Role]", image: "/images/team_2.jpg" },
-  { name: "[Name]", role: "[Role]", image: "/images/team_3.jpg" },
-  { name: "[Name]", role: "[Role]", image: "/images/team_4.jpg" },
+  { name: "[Name]", role: "[Role]", image: "/images/placeholder.jpg" },
+  { name: "[Name]", role: "[Role]", image: "/images/placeholder.jpg" },
+  { name: "[Name]", role: "[Role]", image: "/images/placeholder.jpg" },
 ];
 
 export default function AboutPage() {
+  const belowHeroRef = useRef<HTMLElement>(null);
+  const footerRef = useRef<HTMLElement>(null);
+  const [isHeroPast, setIsHeroPast] = useState(false);
+  const [isFooterVisible, setIsFooterVisible] = useState(false);
+
+  useEffect(() => {
+    const heroObs = new IntersectionObserver(
+      ([entry]) => {
+        setIsHeroPast(entry.isIntersecting || entry.boundingClientRect.top < 0);
+      },
+      { threshold: 0.1 },
+    );
+    if (belowHeroRef.current) heroObs.observe(belowHeroRef.current);
+    return () => heroObs.disconnect();
+  }, []);
+
+  useEffect(() => {
+    const footerObs = new IntersectionObserver(
+      ([entry]) => setIsFooterVisible(entry.isIntersecting),
+      { threshold: 0.05 },
+    );
+    if (footerRef.current) footerObs.observe(footerRef.current);
+    return () => footerObs.disconnect();
+  }, []);
+
+  const showStickyBar = isHeroPast && !isFooterVisible;
+
   return (
     <>
       {/* Page header */}
@@ -67,7 +95,7 @@ export default function AboutPage() {
       </header>
 
       {/* Story */}
-      <section className="py-12 md:py-16">
+      <section ref={belowHeroRef} className="py-12 md:py-16">
         <div className="max-w-280 mx-auto px-5 grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
           <div className="relative aspect-4/3 bg-[#D8D3C6] rounded overflow-hidden order-2 md:order-1">
             <Image
@@ -169,12 +197,21 @@ export default function AboutPage() {
         </div>
       </section>
 
-      <footer className="py-5 pb-8 md:pb-8 text-center text-sm text-steel">
+      <footer
+        ref={footerRef}
+        className="py-5 pb-8 md:pb-8 text-center text-sm text-steel"
+      >
         © 2026 Chase Automobiles. All rights reserved.
       </footer>
 
       {/* Sticky mobile action bar */}
-      <div className="md:hidden fixed bottom-0 left-0 right-0 flex bg-charcoal shadow-[0_-4px_14px_rgba(0,0,0,0.25)] z-60">
+      <div
+        className={`md:hidden fixed bottom-0 left-0 right-0 flex bg-charcoal shadow-[0_-4px_14px_rgba(0,0,0,0.25)] z-60 transition-all duration-300 ${
+          showStickyBar
+            ? "translate-y-0 opacity-100"
+            : "translate-y-full opacity-0 pointer-events-none"
+        }`}
+      >
         <a
           href="tel:+2348031234567"
           className="flex-1 flex flex-col items-center justify-center gap-0.5 py-2.5 pb-3.5 text-[11px] font-bold uppercase tracking-wide text-concrete border-r border-[#333330] bg-rust hover:bg-opacity-95 transition-all"

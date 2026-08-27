@@ -431,6 +431,7 @@ export default function Home() {
                   alt={`Recent work screenshot ${i}`}
                   fill
                   sizes="140px"
+                  quality={90}
                   className="object-cover transition-transform duration-300 hover:scale-110"
                 />
               </div>

@@ -75,7 +75,7 @@ const services: Service[] = [
   },
   {
     slug: "suspension",
-    title: "Suspension",
+    title: "Suspension Repair",
     description:
       "Shocks, struts, bushings, ball joints — smoother ride and precision handling.",
     image: "/images/suspension.png",
