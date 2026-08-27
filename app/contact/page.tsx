@@ -10,8 +10,13 @@ const serviceOptions = [
   "Brakes",
   "AC",
   "Electrical",
+  "Charging System Diagnosis",
+  "Parasitic Drain Test",
+  "Car Scanning & Programming",
   "Suspension & Alignment",
-  "Car Wash & Detailing",
+  "Car Wash",
+  "Car Detailing",
+  "Body Collision Repair",
   "Something else",
 ];
 

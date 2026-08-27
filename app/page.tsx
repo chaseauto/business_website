@@ -216,7 +216,7 @@ export default function Home() {
             <div className="bg-panel border border-line rounded overflow-hidden shadow-sm hover:shadow-md transition-shadow">
               <div className="relative aspect-16/10 bg-[#D8D3C6] overflow-hidden">
                 <Image
-                  src="/images/why_section.png"
+                  src="/images/car_diagnostics.png"
                   alt="Engine Diagnostics & Repair"
                   fill
                   quality={95}

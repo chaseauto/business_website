@@ -17,7 +17,7 @@ const services: Service[] = [
     title: "Engine Diagnostics & Repair",
     description:
       "Warning lights, rough idling, power loss — properly diagnosed, properly fixed.",
-    image: "/images/why_section.png",
+    image: "/images/car_diagnostics.png",
   },
   {
     slug: "transmission-repair",
@@ -30,7 +30,7 @@ const services: Service[] = [
     slug: "brake-service",
     title: "Brake Service",
     description: "Pads, rotors, fluid, and full brake system inspection.",
-    image: "/images/open_car.webp",
+    image: "/images/open_car.png",
   },
   {
     slug: "ac-servicing",
@@ -43,21 +43,42 @@ const services: Service[] = [
     title: "Electrical Repairs",
     description:
       "Battery, alternator, wiring faults, dashboard warning lights.",
+    image: "/images/electrical_repairs.png",
+  },
+  {
+    slug: "charging-system-diagnosis",
+    title: "Charging System Diagnosis",
+    description:
+      "Alternator output testing, battery health check, voltage regulator analysis, and starter load testing.",
     image: "/images/electric_repairs.png",
+  },
+  {
+    slug: "parasitic-drain-test",
+    title: "Parasitic Drain Test",
+    description:
+      "Pinpoint overnight battery drain, hidden electrical leaks, faulty relays, and sleep-mode module issues.",
+    image: "/images/drain-test.png",
+  },
+  {
+    slug: "car-scanning-programming",
+    title: "Car Scanning & Programming",
+    description:
+      "Advanced OEM diagnostics, ECU re-flashing, module coding, sensor calibration, and key programming.",
+    image: "/images/car-programming.png",
   },
   {
     slug: "wheel_balancing-alignment",
     title: "Wheel-balancing & Alignment",
     description:
       "Laser wheel alignment, dynamic balancing, and vibration-free driving.",
-    image: "/images/suspension_service.png",
+    image: "/images/wheel-balancing.jpg",
   },
   {
     slug: "suspension",
     title: "Suspension",
     description:
       "Shocks, struts, bushings, ball joints — smoother ride and precision handling.",
-    image: "/images/suspension_service.png",
+    image: "/images/suspension.png",
   },
   {
     slug: "training",
@@ -67,11 +88,25 @@ const services: Service[] = [
     image: "/images/training.png",
   },
   {
-    slug: "car-polishing",
-    title: "Car Wash & Polishing",
+    slug: "car-wash",
+    title: "Car Wash",
     description:
-      "Full exterior wash and wax, interior vacuuming and trim detail.",
-    image: "/images/car_polishing.jpg",
+      "Complete exterior pressure wash, snow foam rinse, interior vacuuming, and window cleaning.",
+    image: "/images/car-wash.png",
+  },
+  {
+    slug: "car-detailing",
+    title: "Car Detailing",
+    description:
+      "Deep interior restoration, multi-stage paint correction, ceramic protection, and engine bay detailing.",
+    image: "/images/detailing.png",
+  },
+  {
+    slug: "body-collision-repair",
+    title: "Body Collision Repair",
+    description:
+      "Professional dent removal, panel beating, frame alignment, and expert spray painting.",
+    image: "/images/body-collision.png",
   },
   {
     slug: "car-rentals",
@@ -85,7 +120,7 @@ const services: Service[] = [
     title: "Car Towing",
     description:
       "Broke down or in an accident? We'll get your vehicle moved quickly and safely.",
-    image: "/images/under_hood.png",
+    image: "/images/car-towing.png",
   },
   {
     slug: "equipment-leasing",
@@ -215,8 +250,74 @@ const serviceDetails: Record<
     ],
   },
 
+  "charging-system-diagnosis": {
+    eyebrow: "06 / Charging System",
+    intro:
+      "We perform comprehensive charging system testing to ensure your alternator, battery, and voltage regulator are delivering clean, reliable power and keeping your battery fully charged while driving.",
+    includes: [
+      "Alternator output & ripple voltage test",
+      "Battery load & health capacity testing",
+      "Starter motor current draw analysis",
+      "Drive belt tension & pulley inspection",
+      "Battery terminal & ground connection check",
+      "Voltage regulator & diode diagnosis",
+    ],
+    symptoms: [
+      "Battery warning light on dashboard",
+      "Dimming headlights or interior lights",
+      "Battery goes flat while driving",
+      "Whining or growling alternator noise",
+      "Slow engine crank on startup",
+      "Overcharging or burning smell",
+    ],
+  },
+
+  "parasitic-drain-test": {
+    eyebrow: "07 / Parasitic Drain",
+    intro:
+      "If your car battery dies overnight or after sitting for a few days, our specialized parasitic draw test isolates the exact circuit, faulty relay, or module keeping the car awake and draining power.",
+    includes: [
+      "Milliamp drain & quiescent current measurement",
+      "Fuse-by-fuse voltage drop test",
+      "Control module sleep-mode verification",
+      "Aftermarket accessory isolation (trackers, amps, cameras)",
+      "Relay & switch short-circuit inspection",
+      "Wiring harness chafing & ground fault check",
+    ],
+    symptoms: [
+      "Battery dead after sitting overnight",
+      "Car won't start after a few days parked",
+      "New battery keeps getting drained",
+      "Clicking noise when turning the key",
+      "Interior or glovebox light stays on",
+      "Parasitic current draw above spec",
+    ],
+  },
+
+  "car-scanning-programming": {
+    eyebrow: "08 / Scanning & Programming",
+    intro:
+      "Using dealer-level diagnostic scanners and programming interfaces, we scan all onboard vehicle modules, decode complex fault codes, reflash ECUs, and calibrate replacement sensors and control units.",
+    includes: [
+      "Full multi-system OBD2 / CAN-bus scan",
+      "ECU & TCU module flashing and updates",
+      "Key fob & immobilizer programming",
+      "Steering angle & throttle body calibration",
+      "New module coding & VIN pairing",
+      "Live sensor data logging & analysis",
+    ],
+    symptoms: [
+      "Persistent check engine or warning lights",
+      "New replacement part not recognized by car",
+      "Glitches after battery replacement",
+      "Transmission shift logic issues",
+      "Key fob or smart key not detected",
+      "Vehicle stuck in limp mode",
+    ],
+  },
+
   "wheel_balancing-alignment": {
-    eyebrow: "06 / Wheel & Tyre",
+    eyebrow: "09 / Wheel & Tyre",
     intro:
       "We use precision computerized alignment and dynamic balancing equipment to eliminate vibrations, restore straight-line stability, and protect your tyres from premature wear.",
     includes: [
@@ -237,8 +338,8 @@ const serviceDetails: Record<
     ],
   },
 
-  "suspension": {
-    eyebrow: "07 / Suspension",
+  suspension: {
+    eyebrow: "10 / Suspension",
     intro:
       "We inspect, repair, and replace worn suspension components to restore your car's ride comfort, stability, and road holding over bumps and uneven roads.",
     includes: [
@@ -259,8 +360,8 @@ const serviceDetails: Record<
     ],
   },
 
-  "training": {
-    eyebrow: "08 / Training",
+  training: {
+    eyebrow: "11 / Training",
     intro:
       "We offer hands-on automotive vocational training covering modern computer diagnostics, auto-electrical repairs, and mechanical systems for aspiring technicians and professionals.",
     includes: [
@@ -281,30 +382,96 @@ const serviceDetails: Record<
     ],
   },
 
-  "car-polishing": {
-    eyebrow: "09 / Detailing",
+  "car-wash": {
+    eyebrow: "12 / Car Wash",
     intro:
-      "Our detailing service brings the exterior and interior back to a cleaner, sharper condition — from paint to trim.",
+      "Our thorough car wash service removes tough road grime, dirt, and dust, leaving your vehicle spotless inside and out.",
     includes: [
-      "Full exterior wash",
-      "Paint waxing & polishing",
-      "Interior vacuuming",
-      "Interior trim cleaning",
-      "Dashboard & console cleaning",
-      "General vehicle detailing",
+      "High-pressure exterior wash",
+      "Snow foam bath & gentle hand wash",
+      "Interior vacuum & floor mat wash",
+      "Dashboard & console wipe down",
+      "Window & glass cleaning",
+      "Tire shine & rim cleaning",
     ],
     symptoms: [
-      "Dirty exterior",
-      "Dull or faded paint",
-      "Dusty interior",
-      "Grimy trim",
-      "Stained surfaces",
-      "Vehicle needs a refresh",
+      "Muddy or dusty exterior",
+      "Grimy rims and tires",
+      "Dusty interior cabin",
+      "Dirty windows and mirrors",
+      "Post-trip road grime",
+      "Routine maintenance clean",
+    ],
+  },
+
+  "car-detailing": {
+    eyebrow: "13 / Car Detailing",
+    intro:
+      "Our professional auto detailing restores your car's showroom shine through multi-stage machine polishing, deep interior shampooing, leather conditioning, and durable paint protection.",
+    includes: [
+      "Multi-stage paint correction & swirl removal",
+      "High-gloss machine polishing",
+      "Deep upholstery & carpet steam cleaning",
+      "Leather cleaning & UV conditioning",
+      "Ceramic paint sealant application",
+      "Engine bay detail & dressing",
+    ],
+    symptoms: [
+      "Swirl marks, scratches & dull paint",
+      "Faded or oxidized clear coat",
+      "Stubborn interior stains & odors",
+      "Dry or cracking leather seats",
+      "Faded plastic trim",
+      "Pre-sale vehicle restoration",
+    ],
+  },
+
+  "car-polishing": {
+    eyebrow: "13 / Car Detailing",
+    intro:
+      "Our professional auto detailing restores your car's showroom shine through multi-stage machine polishing, deep interior shampooing, leather conditioning, and durable paint protection.",
+    includes: [
+      "Multi-stage paint correction & swirl removal",
+      "High-gloss machine polishing",
+      "Deep upholstery & carpet steam cleaning",
+      "Leather cleaning & UV conditioning",
+      "Ceramic paint sealant application",
+      "Engine bay detail & dressing",
+    ],
+    symptoms: [
+      "Swirl marks, scratches & dull paint",
+      "Faded or oxidized clear coat",
+      "Stubborn interior stains & odors",
+      "Dry or cracking leather seats",
+      "Faded plastic trim",
+      "Pre-sale vehicle restoration",
+    ],
+  },
+
+  "body-collision-repair": {
+    eyebrow: "14 / Body & Collision",
+    intro:
+      "From minor scratch and dent repairs to full structural accident restoration, our panel beaters and spray painters restore your vehicle's bodywork to showroom standards.",
+    includes: [
+      "Accident damage repair",
+      "Panel beating & dent removal",
+      "Chassis & frame realignment",
+      "Precision computerized paint matching",
+      "Bumper & panel replacement",
+      "Rust treatment & body restoration",
+    ],
+    symptoms: [
+      "Accident or collision damage",
+      "Dents, dings, and deep scratches",
+      "Cracked or misaligned bumpers",
+      "Frame or panel alignment issues",
+      "Peeling, faded, or scratched paint",
+      "Rust spots on body panels",
     ],
   },
 
   "car-rentals": {
-    eyebrow: "10 / Rentals",
+    eyebrow: "15 / Rentals",
     intro:
       "Need a vehicle for the day, the week, or longer? We offer clean, well-maintained cars available for short and extended hire.",
     includes: [
@@ -326,7 +493,7 @@ const serviceDetails: Record<
   },
 
   "car-towing": {
-    eyebrow: "11 / Towing",
+    eyebrow: "16 / Towing",
     intro:
       "Broken down on the road or involved in an accident? We'll dispatch a tow and move your vehicle safely to our workshop or your chosen location.",
     includes: [
@@ -348,7 +515,7 @@ const serviceDetails: Record<
   },
 
   "equipment-leasing": {
-    eyebrow: "12 / Leasing",
+    eyebrow: "17 / Leasing",
     intro:
       "We offer flexible lease arrangements for heavy-duty equipment and vehicles, suited to construction, logistics, and business operations.",
     includes: [
