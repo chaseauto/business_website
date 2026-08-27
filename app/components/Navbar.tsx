@@ -18,7 +18,7 @@ const socials = [
     name: "Instagram",
     href: "https://instagram.com/_chaseautomobile",
     icon: (
-      <svg viewBox="0 0 24 24" className="w-4 h-4">
+      <svg viewBox="0 0 24 24" className="w-5 h-5">
         <defs>
           <radialGradient id="navIgGrad" cx="30%" cy="107%" r="150%">
             <stop offset="0%" stopColor="#fdf497" />
@@ -39,7 +39,7 @@ const socials = [
     name: "Facebook",
     href: "https://facebook.com/chase.automobileikd",
     icon: (
-      <svg viewBox="0 0 24 24" fill="#1877F2" className="w-4 h-4">
+      <svg viewBox="0 0 24 24" fill="#1877F2" className="w-5 h-5">
         <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z" />
       </svg>
     ),
@@ -48,7 +48,7 @@ const socials = [
     name: "TikTok",
     href: "https://tiktok.com/@chaseautomobiles",
     icon: (
-      <svg viewBox="0 0 24 24" className="w-4 h-4">
+      <svg viewBox="0 0 24 24" className="w-5 h-5">
         <path
           fill="#25F4EE"
           d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.2 1.74 2.89 2.89 0 0 1 2.31-4.64c.298-.002.595.042.88.13V9.4a6.33 6.33 0 0 0-1-.08A6.34 6.34 0 0 0 3 15.66a6.34 6.34 0 0 0 10.86 4.46 6.27 6.27 0 0 0 1.88-4.45V8.83a8.28 8.28 0 0 0 4.85 1.57v-3.71Z"
@@ -69,7 +69,7 @@ const socials = [
     name: "WhatsApp",
     href: "https://wa.me/2347073836074",
     icon: (
-      <svg viewBox="0 0 24 24" fill="#25D366" className="w-4 h-4">
+      <svg viewBox="0 0 24 24" fill="#25D366" className="w-5 h-5">
         <path d="M12.031 2C6.496 2 2 6.496 2 12.031c0 1.769.462 3.497 1.342 5.023L2 22l5.093-1.336A9.98 9.98 0 0 0 12.031 22c5.535 0 10.031-4.496 10.031-10.031S17.566 2 12.031 2Zm0 18.344a8.3 8.3 0 0 1-4.234-1.156l-.305-.18-3.148.828.84-3.07-.195-.312a8.3 8.3 0 1 1 15.372-4.423c0 4.582-3.75 8.313-8.33 8.313Zm4.57-6.234c-.25-.125-1.477-.73-1.703-.812-.227-.086-.39-.125-.555.125-.164.25-.64.812-.781.976-.14.164-.281.188-.531.063-.25-.125-1.055-.39-2.01-1.242-.742-.664-1.242-1.484-1.39-1.734-.149-.25-.016-.383.11-.508.117-.117.25-.305.375-.46.125-.157.164-.266.25-.438.086-.18.04-.336-.023-.46-.063-.126-.555-1.337-.766-1.845-.203-.492-.414-.422-.562-.43h-.484c-.164 0-.438.063-.664.305-.227.25-.867.852-.867 2.078 0 1.227.89 2.414 1.016 2.586.125.164 1.758 2.688 4.258 3.766.594.258 1.055.414 1.414.531.594.188 1.14.164 1.562.102.477-.07 1.477-.602 1.688-1.18.21-.586.21-1.086.148-1.188-.062-.101-.226-.164-.476-.289Z" />
       </svg>
     ),
@@ -244,7 +244,7 @@ export default function Navbar() {
           </div>
 
           {/* Social icons row */}
-          <div className="pt-2 flex items-center justify-center gap-3">
+          <div className="pt-2 flex items-center justify-center gap-3.5">
             {socials.map((s) => (
               <a
                 key={s.name}
@@ -252,7 +252,7 @@ export default function Navbar() {
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label={s.name}
-                className="w-9 h-9 flex items-center justify-center rounded-full border border-[#333330] bg-gray-800 shadow-xs hover:scale-110 hover:border-steel transition-all duration-200"
+                className="w-10.5 h-10.5 flex items-center justify-center rounded-full border border-[#333330] bg-gray-800 shadow-xs hover:scale-110 hover:border-steel transition-all duration-200"
               >
                 {s.icon}
               </a>
