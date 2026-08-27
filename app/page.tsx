@@ -219,7 +219,7 @@ export default function Home() {
                   src="/images/car_diagnostics.png"
                   alt="Engine Diagnostics & Repair"
                   fill
-                  quality={95}
+                  quality={90}
                   sizes="(max-w-768px) 100vw, 33vw"
                   className="object-cover transition-transform duration-300 hover:scale-105"
                 />
@@ -251,7 +251,7 @@ export default function Home() {
                   alt="Transmission Repair"
                   fill
                   sizes="(max-width-768px) 100vw, 33vw"
-                  quality={95}
+                  quality={90}
                   className="object-cover transition-transform duration-300 hover:scale-105"
                 />
               </div>
@@ -279,7 +279,7 @@ export default function Home() {
                   alt="Electrical Repairs"
                   fill
                   sizes="(max-width-768px) 100vw, 33vw"
-                  quality={95}
+                  quality={90}
                   unoptimized
                   className="object-cover transition-transform duration-300 hover:scale-105"
                 />
