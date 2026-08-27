@@ -76,7 +76,7 @@ export default function ContactPage() {
       <section className="relative overflow-hidden bg-charcoal text-concrete">
         <div className="absolute inset-0">
           <Image
-            src="/images/suspension_service.png"
+            src="/images/contact-hero.jpg"
             alt="Chase Automobiles Contact"
             fill
             priority

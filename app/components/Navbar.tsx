@@ -42,11 +42,11 @@ export default function Navbar() {
             className="flex h-10 w-30 shrink-0 items-center"
           >
             <Image
-              src="/images/chase_logo.png"
+              src="/images/chase-logo.png"
               width={120}
-              height={40}
+              height={60}
               alt="Chase Logo"
-              className="h-10 w-auto object-contain"
+              className="h-14 w-auto object-contain"
               priority
             />
           </Link>
@@ -117,11 +117,11 @@ export default function Navbar() {
             className="flex h-10 w-30 shrink-0 items-center"
           >
             <Image
-              src="/images/chase_logo.png"
+              src="/images/chase-logo.png"
               width={120}
-              height={40}
+              height={60}
               alt="Chase Logo"
-              className="h-10 w-auto object-contain"
+              className="h-14 w-auto object-contain"
             />
           </Link>
           <button
