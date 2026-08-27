@@ -2,6 +2,7 @@
 
 import { useEffect, useRef, useState } from "react";
 import Image from "next/image";
+import Footer from "../components/Footer";
 
 const serviceOptions = [
   "Not sure — need a diagnosis",
@@ -103,13 +104,13 @@ export default function ContactPage() {
 
             <div className="flex flex-col md:flex-row gap-2.5 mt-8 max-w-175">
               <a
-                href="tel:+2348031234567"
+                href="tel:+2347073836074"
                 className="flex-1 flex items-center justify-center gap-2 px-5 py-3.75 rounded font-bold text-[15px] uppercase tracking-wide bg-rust text-white hover:bg-opacity-90 transition-all"
               >
                 Call Now
               </a>
               <a
-                href="https://wa.me/2348031234567"
+                href="https://wa.me/2347073836074"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex-1 flex items-center justify-center gap-2 px-5 py-3.75 rounded font-bold text-[15px] uppercase tracking-wide bg-hazard text-white hover:bg-opacity-90 transition-all"
@@ -324,12 +325,8 @@ export default function ContactPage() {
         </div>
       </section>
 
-      <footer
-        ref={footerRef}
-        className="py-5 pb-8 md:pb-8 text-center text-sm text-steel"
-      >
-        © 2026 Chase Automobiles. All rights reserved.
-      </footer>
+      {/* Footer */}
+      <Footer ref={footerRef} />
 
       {/* Sticky mobile action bar */}
       <div
@@ -340,13 +337,13 @@ export default function ContactPage() {
         }`}
       >
         <a
-          href="tel:+2348031234567"
+          href="tel:+2347073836074"
           className="flex-1 flex flex-col items-center justify-center gap-0.5 py-2.5 pb-3.5 text-[11px] font-bold uppercase tracking-wide text-concrete border-r border-[#333330] bg-rust hover:bg-opacity-95 transition-all"
         >
           Call
         </a>
         <a
-          href="https://wa.me/2348031234567"
+          href="https://wa.me/2347073836074"
           target="_blank"
           rel="noopener noreferrer"
           className="flex-1 bg-hazard flex flex-col items-center justify-center gap-0.5 py-2.5 pb-3.5 text-[11px] font-bold uppercase tracking-wide text-concrete hover:bg-[#222] transition-colors"

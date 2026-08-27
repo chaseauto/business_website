@@ -2,6 +2,7 @@
 
 import { useEffect, useRef, useState } from "react";
 import Image from "next/image";
+import Footer from "../components/Footer";
 
 const team = [
   {
@@ -45,7 +46,7 @@ export default function AboutPage() {
   return (
     <>
       {/* Page header */}
-      <header className="relative py-14 md:py-16 bg-charcoal text-concrete overflow-hidden">
+      <header className="relative bg-charcoal text-concrete overflow-hidden">
         <div className="absolute inset-0">
           <Image
             src="/images/about-hero.png"
@@ -59,37 +60,39 @@ export default function AboutPage() {
           <div className="absolute inset-0 bg-linear-to-t from-charcoal via-transparent to-charcoal/40" />
         </div>
 
-        <div className="relative z-10 max-w-280 mx-auto px-5">
-          <h1 className="font-display font-black uppercase leading-[1.1] text-[32px] sm:text-[40px] md:text-[48px] max-w-[18ch]">
-            Built on trust, <span className="text-hazard">and excellence.</span>
-          </h1>
-          <p className="mt-4 text-[15px] text-[#C9C6BE] max-w-[52ch]">
-            At Chase Automobile, we believe that your car deserves the best
-            care. That means honest service, expert workmanship, and attention
-            to every detail, so you can drive away with confidence knowing your
-            vehicle is in good hands.
-          </p>
-          <div className="flex flex-col md:flex-row gap-2.5 mt-8 max-w-175">
-            <a
-              href="tel:+2348031234567"
-              className="flex-1 flex items-center justify-center gap-2 px-5 py-3.75 rounded font-bold text-[15px] uppercase tracking-wide bg-rust text-white hover:bg-opacity-90 transition-all"
-            >
-              Call Now
-            </a>
-            <a
-              href="https://wa.me/2348031234567"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex-1 flex items-center justify-center gap-2 px-5 py-3.75 rounded font-bold text-[15px] uppercase tracking-wide bg-hazard text-white hover:bg-opacity-90 transition-all"
-            >
-              WhatsApp Us
-            </a>
-            <a
-              href="#contact"
-              className="flex-1 flex items-center justify-center gap-2 px-5 py-3.75 rounded font-bold text-[15px] uppercase tracking-wide bg-transparent text-concrete border-[1.5px] border-steel hover:border-line transition-all"
-            >
-              Get Directions
-            </a>
+        <div className="relative z-10 max-w-280 mx-auto px-5 py-20 md:py-28">
+          <div className="max-w-3xl">
+            <h1 className="font-display font-black uppercase leading-[1.05] text-[42px] sm:text-[56px] md:text-[72px]">
+              Built on trust, <span className="text-hazard">and excellence.</span>
+            </h1>
+            <p className="mt-6 text-[16px] md:text-[17px] leading-relaxed text-[#C9C6BE] max-w-[58ch]">
+              At Chase Automobile, we believe that your car deserves the best
+              care. That means honest service, expert workmanship, and attention
+              to every detail, so you can drive away with confidence knowing your
+              vehicle is in good hands.
+            </p>
+            <div className="flex flex-col md:flex-row gap-2.5 mt-8 max-w-175">
+              <a
+                href="tel:+2347073836074"
+                className="flex-1 flex items-center justify-center gap-2 px-5 py-3.75 rounded font-bold text-[15px] uppercase tracking-wide bg-rust text-white hover:bg-opacity-90 transition-all"
+              >
+                Call Now
+              </a>
+              <a
+                href="https://wa.me/2347073836074"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex-1 flex items-center justify-center gap-2 px-5 py-3.75 rounded font-bold text-[15px] uppercase tracking-wide bg-hazard text-white hover:bg-opacity-90 transition-all"
+              >
+                WhatsApp Us
+              </a>
+              <a
+                href="#contact"
+                className="flex-1 flex items-center justify-center gap-2 px-5 py-3.75 rounded font-bold text-[15px] uppercase tracking-wide bg-transparent text-concrete border-[1.5px] border-steel hover:border-line transition-all"
+              >
+                Get Directions
+              </a>
+            </div>
           </div>
         </div>
       </header>
@@ -174,13 +177,13 @@ export default function AboutPage() {
 
           <div className="flex flex-col md:flex-row gap-2.5 mt-6">
             <a
-              href="tel:+2348031234567"
+              href="tel:+2347073836074"
               className="flex-1 flex items-center justify-center gap-2 px-5 py-3.75 rounded font-bold text-[15px] uppercase tracking-wide bg-rust text-white hover:bg-opacity-90 transition-all"
             >
               Call Now
             </a>
             <a
-              href="https://wa.me/2348031234567"
+              href="https://wa.me/2347073836074"
               target="_blank"
               rel="noopener noreferrer"
               className="flex-1 flex items-center justify-center gap-2 px-5 py-3.75 rounded font-bold text-[15px] uppercase tracking-wide bg-hazard text-charcoal hover:bg-opacity-90 transition-all"
@@ -197,12 +200,8 @@ export default function AboutPage() {
         </div>
       </section>
 
-      <footer
-        ref={footerRef}
-        className="py-5 pb-8 md:pb-8 text-center text-sm text-steel"
-      >
-        © 2026 Chase Automobiles. All rights reserved.
-      </footer>
+      {/* Footer */}
+      <Footer ref={footerRef} />
 
       {/* Sticky mobile action bar */}
       <div
@@ -213,13 +212,13 @@ export default function AboutPage() {
         }`}
       >
         <a
-          href="tel:+2348031234567"
+          href="tel:+2347073836074"
           className="flex-1 flex flex-col items-center justify-center gap-0.5 py-2.5 pb-3.5 text-[11px] font-bold uppercase tracking-wide text-concrete border-r border-[#333330] bg-rust hover:bg-opacity-95 transition-all"
         >
           Call
         </a>
         <a
-          href="https://wa.me/2348031234567"
+          href="https://wa.me/2347073836074"
           target="_blank"
           rel="noopener noreferrer"
           className="flex-1 bg-hazard flex flex-col items-center justify-center gap-0.5 py-2.5 pb-3.5 text-[11px] font-bold uppercase tracking-wide text-concrete hover:bg-[#222] transition-colors"

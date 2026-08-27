@@ -3,6 +3,7 @@
 import { useEffect, useRef, useState } from "react";
 import Image from "next/image";
 import { ArrowRight } from "lucide-react";
+import Footer from "../components/Footer";
 
 type Service = {
   slug: string;
@@ -599,13 +600,13 @@ export default function ServicesPage() {
 
             <div className="flex flex-col md:flex-row gap-2.5 mt-8 max-w-175">
               <a
-                href="tel:+2348031234567"
+                href="tel:+2347073836074"
                 className="flex-1 flex items-center justify-center gap-2 px-5 py-3.75 rounded font-bold text-[15px] uppercase tracking-wide bg-rust text-white hover:bg-opacity-90 transition-all"
               >
                 Call Now
               </a>
               <a
-                href="https://wa.me/2348031234567"
+                href="https://wa.me/2347073836074"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex-1 flex items-center justify-center gap-2 px-5 py-3.75 rounded font-bold text-[15px] uppercase tracking-wide bg-hazard text-white hover:bg-opacity-90 transition-all"
@@ -767,14 +768,14 @@ export default function ServicesPage() {
 
             <div className="flex flex-col sm:flex-row gap-2.5 mt-8">
               <a
-                href="tel:+2348031234567"
+                href="tel:+2347073836074"
                 className="inline-flex items-center justify-center px-6 py-3.75 bg-rust text-white font-bold text-[14px] uppercase tracking-wide hover:bg-opacity-90 transition-all"
               >
                 Talk To A Mechanic
               </a>
 
               <a
-                href="https://wa.me/2348031234567"
+                href="https://wa.me/2347073836074"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center justify-center px-6 py-3.75 border border-steel text-concrete font-bold text-[14px] uppercase tracking-wide hover:border-concrete transition-all"
@@ -881,14 +882,14 @@ export default function ServicesPage() {
 
           <div className="flex flex-col md:flex-row gap-2.5 mt-7">
             <a
-              href="tel:+2348031234567"
+              href="tel:+2347073836074"
               className="flex-1 flex items-center justify-center px-5 py-3.75 bg-rust text-white font-bold text-[14px] uppercase tracking-wide hover:bg-opacity-90 transition-all"
             >
               Call Now
             </a>
 
             <a
-              href="https://wa.me/2348031234567"
+              href="https://wa.me/2347073836074"
               target="_blank"
               rel="noopener noreferrer"
               className="flex-1 flex items-center justify-center px-5 py-3.75 bg-hazard text-white font-bold text-[14px] uppercase tracking-wide hover:bg-opacity-90 transition-all"
@@ -909,12 +910,7 @@ export default function ServicesPage() {
       </section>
 
       {/* Footer */}
-      <footer
-        ref={footerRef}
-        className="py-6 text-center text-sm text-steel bg-concrete"
-      >
-        © 2026 Chase Automobiles. All rights reserved.
-      </footer>
+      <Footer ref={footerRef} />
 
       {/* Sticky mobile action bar */}
       <div
@@ -925,13 +921,13 @@ export default function ServicesPage() {
         }`}
       >
         <a
-          href="tel:+2348031234567"
+          href="tel:+2347073836074"
           className="flex-1 flex flex-col items-center justify-center gap-0.5 py-2.5 pb-3.5 text-[11px] font-bold uppercase tracking-wide text-concrete border-r border-[#333330] bg-rust hover:bg-opacity-95 transition-all"
         >
           Call
         </a>
         <a
-          href="https://wa.me/2348031234567"
+          href="https://wa.me/2347073836074"
           target="_blank"
           rel="noopener noreferrer"
           className="flex-1 bg-hazard flex flex-col items-center justify-center gap-0.5 py-2.5 pb-3.5 text-[11px] font-bold uppercase tracking-wide text-concrete hover:bg-[#222] transition-colors"

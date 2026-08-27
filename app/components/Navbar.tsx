@@ -162,14 +162,14 @@ export default function Navbar() {
         {/* Sidebar CTA */}
         <div className="mt-auto px-5 py-6 border-t border-line flex flex-col gap-2.5">
           <a
-            href="tel:+2348031234567"
+            href="tel:+2347073836074"
             onClick={() => setIsMobileMenuOpen(false)}
             className="flex items-center justify-center gap-2 px-5 py-3.25 rounded font-bold text-[14px] uppercase tracking-wide bg-rust text-white hover:bg-opacity-90 transition-all"
           >
             Call Now
           </a>
           <a
-            href="https://wa.me/2348031234567"
+            href="https://wa.me/2347073836074"
             target="_blank"
             rel="noopener noreferrer"
             onClick={() => setIsMobileMenuOpen(false)}

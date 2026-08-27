@@ -3,6 +3,7 @@
 import { useEffect, useState, useRef } from "react";
 import Image from "next/image";
 import Link from "next/link";
+import Footer from "./components/Footer";
 
 function AnimatedCounter({
   end,
@@ -122,7 +123,7 @@ export default function Home() {
       {/* Hero */}
       {/* Hero */}
 
-      <header className="relative pt-20 pb-16 bg-charcoal text-concrete overflow-hidden">
+      <header className="relative bg-charcoal text-concrete overflow-hidden">
         {/* Background Image with Overlay */}
         <div className="absolute inset-0 z-0">
           <Image
@@ -137,62 +138,64 @@ export default function Home() {
           <div className="absolute inset-0 bg-linear-to-t from-charcoal/50 via-transparent to-charcoal/50" />
         </div>
 
-        <div className="relative z-10 max-w-280 mx-auto px-5">
-          <h1 className="font-display font-black uppercase leading-[1.2] text-[38px] sm:text-[48px] md:text-[60px] max-w-[15ch]">
-            Your car, <br /> <span className="text-hazard">fixed right </span>{" "}
-            <br /> the first time.
-          </h1>
-          <p className="mt-4 text-[15.5px] text-[#C9C6BE] max-w-[42ch]">
-            Engine, transmission, brakes, AC and electrical repairs done by
-            mechanics who stand behind their work.
-          </p>
+        <div className="relative z-10 max-w-280 mx-auto px-5 py-20 md:py-28">
+          <div className="max-w-3xl">
+            <h1 className="font-display font-black uppercase leading-[1.05] text-[42px] sm:text-[56px] md:text-[72px]">
+              Your car, <br /> <span className="text-hazard">fixed right </span>{" "}
+              <br /> the first time.
+            </h1>
+            <p className="mt-6 text-[16px] md:text-[17px] leading-relaxed text-[#C9C6BE] max-w-[58ch]">
+              Engine, transmission, brakes, AC and electrical repairs done by
+              mechanics who stand behind their work.
+            </p>
 
-          <div className="flex flex-col md:flex-row gap-2.5 mt-8 max-w-175">
-            <a
-              href="tel:+2348031234567"
-              className="flex-1 flex items-center justify-center gap-2 px-5 py-3.75 rounded font-bold text-[15px] uppercase tracking-wide bg-rust text-white hover:bg-opacity-90 transition-all"
-            >
-              Call Now
-            </a>
-            <a
-              href="https://wa.me/2348031234567"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex-1 flex items-center justify-center gap-2 px-5 py-3.75 rounded font-bold text-[15px] uppercase tracking-wide bg-hazard text-white hover:bg-opacity-90 transition-all"
-            >
-              WhatsApp Us
-            </a>
-            <a
-              href="#contact"
-              className="flex-1 flex items-center justify-center gap-2 px-5 py-3.75 rounded font-bold text-[15px] uppercase tracking-wide bg-transparent text-concrete border-[1.5px] border-steel hover:border-line transition-all"
-            >
-              Get Directions
-            </a>
-          </div>
+            <div className="flex flex-col md:flex-row gap-2.5 mt-8 max-w-175">
+              <a
+                href="tel:+2347073836074"
+                className="flex-1 flex items-center justify-center gap-2 px-5 py-3.75 rounded font-bold text-[15px] uppercase tracking-wide bg-rust text-white hover:bg-opacity-90 transition-all"
+              >
+                Call Now
+              </a>
+              <a
+                href="https://wa.me/2347073836074"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex-1 flex items-center justify-center gap-2 px-5 py-3.75 rounded font-bold text-[15px] uppercase tracking-wide bg-hazard text-white hover:bg-opacity-90 transition-all"
+              >
+                WhatsApp Us
+              </a>
+              <a
+                href="#contact"
+                className="flex-1 flex items-center justify-center gap-2 px-5 py-3.75 rounded font-bold text-[15px] uppercase tracking-wide bg-transparent text-concrete border-[1.5px] border-steel hover:border-line transition-all"
+              >
+                Get Directions
+              </a>
+            </div>
 
-          <div className="grid grid-cols-3 md:max-w-105 border-t border-[#333330] mt-9 pt-6">
-            <div className="text-center border-r border-[#333330]">
-              <div className="font-display font-black text-2xl text-hazard">
-                <AnimatedCounter end={5} suffix="+" />
+            <div className="grid grid-cols-3 md:max-w-105 border-t border-[#333330] mt-9 pt-6">
+              <div className="text-center border-r border-[#333330]">
+                <div className="font-display font-black text-2xl text-hazard">
+                  <AnimatedCounter end={5} suffix="+" />
+                </div>
+                <div className="text-[10.5px] text-[#A8A49B] uppercase tracking-wide mt-0.5">
+                  Years Running
+                </div>
               </div>
-              <div className="text-[10.5px] text-[#A8A49B] uppercase tracking-wide mt-0.5">
-                Years Running
+              <div className="text-center border-r border-[#333330]">
+                <div className="font-display font-black text-2xl text-hazard">
+                  <AnimatedCounter end={1000} suffix="+" />
+                </div>
+                <div className="text-[10.5px] text-[#A8A49B] uppercase tracking-wide mt-0.5">
+                  Vehicles Fixed
+                </div>
               </div>
-            </div>
-            <div className="text-center border-r border-[#333330]">
-              <div className="font-display font-black text-2xl text-hazard">
-                <AnimatedCounter end={1000} suffix="+" />
-              </div>
-              <div className="text-[10.5px] text-[#A8A49B] uppercase tracking-wide mt-0.5">
-                Vehicles Fixed
-              </div>
-            </div>
-            <div className="text-center">
-              <div className="font-display font-black text-2xl text-hazard">
-                <AnimatedCounter end={6} suffix="+" />
-              </div>
-              <div className="text-[10.5px] text-[#A8A49B] uppercase tracking-wide mt-0.5">
-                Certified Mechanics
+              <div className="text-center">
+                <div className="font-display font-black text-2xl text-hazard">
+                  <AnimatedCounter end={6} suffix="+" />
+                </div>
+                <div className="text-[10.5px] text-[#A8A49B] uppercase tracking-wide mt-0.5">
+                  Certified Mechanics
+                </div>
               </div>
             </div>
           </div>
@@ -459,13 +462,13 @@ export default function Home() {
 
           <div className="flex flex-col md:flex-row gap-2.5 mt-5">
             <a
-              href="tel:+2348031234567"
+              href="tel:+2347073836074"
               className="flex-1 flex items-center justify-center gap-2 px-5 py-3.75 rounded font-bold text-[15px] uppercase tracking-wide bg-rust text-white hover:bg-opacity-90 transition-all"
             >
               Call Now
             </a>
             <a
-              href="https://wa.me/2348031234567"
+              href="https://wa.me/2347073836074"
               target="_blank"
               rel="noopener noreferrer"
               className="flex-1 flex items-center justify-center gap-2 px-5 py-3.75 rounded font-bold text-[15px] uppercase tracking-wide bg-hazard text-white hover:bg-opacity-90 transition-all"
@@ -497,9 +500,8 @@ export default function Home() {
         </div>
       </section>
 
-      <footer className="py-5 pb-8 md:pb-8 text-center text-sm text-steel">
-        © 2026 Chase Automobiles. All rights reserved.
-      </footer>
+      {/* Footer */}
+      <Footer />
 
       {/* Sticky mobile action bar */}
       <div
@@ -510,13 +512,13 @@ export default function Home() {
         }`}
       >
         <a
-          href="tel:+2348031234567"
+          href="tel:+2347073836074"
           className="flex-1 flex flex-col items-center justify-center gap-0.5 py-2.5 pb-3.5 text-[11px] font-bold uppercase tracking-wide text-concrete border-r border-[#333330] bg-rust hover:bg-opacity-95 transition-all"
         >
           Call
         </a>
         <a
-          href="https://wa.me/2348031234567"
+          href="https://wa.me/2347073836074"
           target="_blank"
           rel="noopener noreferrer"
           className="flex-1 bg-hazard flex flex-col items-center justify-center gap-0.5 py-2.5 pb-3.5 text-[11px] font-bold uppercase tracking-wide text-concrete hover:bg-[#222] transition-colors"
