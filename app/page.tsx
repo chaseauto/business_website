@@ -275,22 +275,20 @@ export default function Home() {
             <div className="bg-panel border border-line rounded overflow-hidden shadow-sm hover:shadow-md transition-shadow">
               <div className="relative aspect-16/10 bg-[#D8D3C6] overflow-hidden">
                 <Image
-                  src="/images/car_polishing.jpg"
-                  alt="Electrical Repairs"
+                  src="/images/open_car.png"
+                  alt="Brake Service"
                   fill
-                  sizes="(max-width-768px) 100vw, 33vw"
+                  sizes="(max-width: 768px) 100vw, 33vw"
                   quality={90}
-                  unoptimized
                   className="object-cover transition-transform duration-300 hover:scale-105"
                 />
               </div>
               <div className="p-4">
                 <h3 className="text-base font-extrabold mb-1.5">
-                  Car Wash & Detailing
+                  Brake Service
                 </h3>
                 <p className="text-[13.5px] text-steel mb-2.5">
-                  Full exterior wash and wax, interior vacuuming and trim
-                  detail.
+                  Pads, rotors, fluid, and full brake system inspection.
                 </p>
                 <a
                   href="#contact"
@@ -436,14 +434,6 @@ export default function Home() {
                 />
               </div>
             ))}
-          </div>
-          <div className="mt-6">
-            <a
-              href="/gallery"
-              className="inline-block px-6 py-3 bg-rust text-white font-bold text-[14px] uppercase tracking-wide rounded hover:bg-opacity-90 transition-all"
-            >
-              Go To Gallery
-            </a>
           </div>
         </div>
       </section>
