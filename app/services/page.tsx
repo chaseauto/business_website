@@ -120,7 +120,7 @@ const services: Service[] = [
     title: "Car Towing",
     description:
       "Broke down or in an accident? We'll get your vehicle moved quickly and safely.",
-    image: "/images/car-towing.png",
+    image: "/images/car_towing.png",
   },
   {
     slug: "equipment-leasing",
