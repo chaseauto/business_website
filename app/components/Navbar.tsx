@@ -139,6 +139,7 @@ export default function Navbar() {
               <Image
                 src="/images/x-icon.png"
                 alt="Close"
+                unoptimized
                 width={30}
                 height={30}
               />
@@ -195,6 +196,7 @@ export default function Navbar() {
           >
             <Image
               src="/images/x-icon.png"
+              unoptimized
               alt="Close"
               width={30}
               height={30}
