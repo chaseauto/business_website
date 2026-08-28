@@ -16,7 +16,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
         <div className="border-b border-line text-[12.5px] font-medium flex flex-col sm:flex-row">
           {/* Address side */}
           <div className="flex-1 bg-panel text-charcoal py-3 px-5 flex items-center justify-start">
-            <span className="opacity-90">
+            <span className="opacity-90 md:text-base text-xs">
               10/11 Chief Jamiu, Elepe Royal Estate, Aga, Ikorodu, Lagos
             </span>
           </div>
