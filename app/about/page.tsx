@@ -63,13 +63,14 @@ export default function AboutPage() {
         <div className="relative z-10 max-w-280 mx-auto px-5 py-20 md:py-28">
           <div className="max-w-3xl">
             <h1 className="font-display font-black uppercase leading-[1.05] text-[42px] sm:text-[56px] md:text-[72px]">
-              Built on trust, <span className="text-hazard">and excellence.</span>
+              Built on trust,{" "}
+              <span className="text-hazard">and excellence.</span>
             </h1>
             <p className="mt-6 text-[16px] md:text-[17px] leading-relaxed text-[#C9C6BE] max-w-[58ch]">
               At Chase Automobile, we believe that your car deserves the best
               care. That means honest service, expert workmanship, and attention
-              to every detail, so you can drive away with confidence knowing your
-              vehicle is in good hands.
+              to every detail, so you can drive away with confidence knowing
+              your vehicle is in good hands.
             </p>
             <div className="flex flex-col md:flex-row gap-2.5 mt-8 max-w-175">
               <a
@@ -130,7 +131,7 @@ export default function AboutPage() {
       </section>
 
       {/* Team */}
-      <section className="py-12 md:py-16 bg-panel border-t border-line">
+      {/* <section className="py-12 md:py-16 bg-panel border-t border-line">
         <div className="max-w-280 mx-auto px-5">
           <div className="text-xs font-bold text-rust uppercase tracking-widest mb-2">
             The People Behind The Work
@@ -159,7 +160,7 @@ export default function AboutPage() {
             ))}
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* CTA */}
       <section className="bg-charcoal text-concrete py-11">
