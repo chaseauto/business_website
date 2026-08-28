@@ -455,7 +455,7 @@ export default function Home() {
             Find &amp; Reach Chase Automobiles
           </h2>
           <p className="text-[#C9C6BE] text-[14.5px] leading-relaxed">
-            10/11 Chief Jamiu, Elepe Royal Estate, Aga, Lagos
+            10/11 Chief Jamiu, Elepe Royal Estate, Aga, Ikorodu, Lagos
             <br />
             Open Mon–Sat, 8AM–7PM
           </p>

@@ -158,7 +158,7 @@ const Footer = forwardRef<HTMLElement, React.HTMLAttributes<HTMLElement>>(
                   </a>
                 </li>
                 <li className="text-[#A8A49B] leading-relaxed pt-1">
-                  10/11 Chief Jamiu, Elepe Royal Estate, Aga, Lagos
+                  10/11 Chief Jamiu, Elepe Royal Estate, Aga, Ikorodu, Lagos
                 </li>
               </ul>
             </div>

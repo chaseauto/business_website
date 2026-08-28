@@ -51,15 +51,9 @@ const services: Service[] = [
     title: "Charging System Diagnosis",
     description:
       "Alternator output testing, battery health check, voltage regulator analysis, and starter load testing.",
-    image: "/images/electric_repairs.png",
-  },
-  {
-    slug: "parasitic-drain-test",
-    title: "Parasitic Drain Test",
-    description:
-      "Pinpoint overnight battery drain, hidden electrical leaks, faulty relays, and sleep-mode module issues.",
     image: "/images/drain-test.png",
   },
+
   {
     slug: "car-scanning-programming",
     title: "Car Scanning & Programming",
@@ -257,6 +251,7 @@ const serviceDetails: Record<
       "We perform comprehensive charging system testing to ensure your alternator, battery, and voltage regulator are delivering clean, reliable power and keeping your battery fully charged while driving.",
     includes: [
       "Alternator output & ripple voltage test",
+      "Parasitic drain test",
       "Battery load & health capacity testing",
       "Starter motor current draw analysis",
       "Drive belt tension & pulley inspection",
@@ -264,34 +259,13 @@ const serviceDetails: Record<
       "Voltage regulator & diode diagnosis",
     ],
     symptoms: [
+      "Battery draining",
       "Battery warning light on dashboard",
       "Dimming headlights or interior lights",
       "Battery goes flat while driving",
       "Whining or growling alternator noise",
       "Slow engine crank on startup",
       "Overcharging or burning smell",
-    ],
-  },
-
-  "parasitic-drain-test": {
-    eyebrow: "07 / Parasitic Drain",
-    intro:
-      "If your car battery dies overnight or after sitting for a few days, our specialized parasitic draw test isolates the exact circuit, faulty relay, or module keeping the car awake and draining power.",
-    includes: [
-      "Milliamp drain & quiescent current measurement",
-      "Fuse-by-fuse voltage drop test",
-      "Control module sleep-mode verification",
-      "Aftermarket accessory isolation (trackers, amps, cameras)",
-      "Relay & switch short-circuit inspection",
-      "Wiring harness chafing & ground fault check",
-    ],
-    symptoms: [
-      "Battery dead after sitting overnight",
-      "Car won't start after a few days parked",
-      "New battery keeps getting drained",
-      "Clicking noise when turning the key",
-      "Interior or glovebox light stays on",
-      "Parasitic current draw above spec",
     ],
   },
 
@@ -408,9 +382,11 @@ const serviceDetails: Record<
   "car-detailing": {
     eyebrow: "13 / Car Detailing",
     intro:
-      "Our professional auto detailing restores your car's showroom shine through multi-stage machine polishing, deep interior shampooing, leather conditioning, and durable paint protection.",
+      "Our professional auto detailing restores your car's showroom shine through multi-stage machine polishing, deep interior polishing, leather conditioning, and durable paint protection.",
     includes: [
       "Multi-stage paint correction & swirl removal",
+      "Interior detailing & polishing",
+      "Tyre rim treatment",
       "High-gloss machine polishing",
       "Deep upholstery & carpet steam cleaning",
       "Leather cleaning & UV conditioning",
@@ -423,29 +399,6 @@ const serviceDetails: Record<
       "Stubborn interior stains & odors",
       "Dry or cracking leather seats",
       "Faded plastic trim",
-      "Pre-sale vehicle restoration",
-    ],
-  },
-
-  "car-polishing": {
-    eyebrow: "13 / Car Detailing",
-    intro:
-      "Our professional auto detailing restores your car's showroom shine through multi-stage machine polishing, deep interior shampooing, leather conditioning, and durable paint protection.",
-    includes: [
-      "Multi-stage paint correction & swirl removal",
-      "High-gloss machine polishing",
-      "Deep upholstery & carpet steam cleaning",
-      "Leather cleaning & UV conditioning",
-      "Ceramic paint sealant application",
-      "Engine bay detail & dressing",
-    ],
-    symptoms: [
-      "Swirl marks, scratches & dull paint",
-      "Faded or oxidized clear coat",
-      "Stubborn interior stains & odors",
-      "Dry or cracking leather seats",
-      "Faded plastic trim",
-      "Pre-sale vehicle restoration",
     ],
   },
 
@@ -593,9 +546,9 @@ export default function ServicesPage() {
             </h1>
 
             <p className="mt-6 text-[16px] md:text-[17px] leading-relaxed text-[#C9C6BE] max-w-[58ch]">
-              From engine diagnostics to brake repairs, AC servicing and
-              detailing, Chase Automobiles handles the systems that keep your
-              car running, stopping, and driving properly.
+              From engine diagnostics to suspension repairs, AC servicing, car
+              wash and detailing, Chase Automobiles handles the systems that
+              keep your car running, stopping, and driving properly.
             </p>
 
             <div className="flex flex-col md:flex-row gap-2.5 mt-8 max-w-175">
@@ -875,7 +828,7 @@ export default function ServicesPage() {
           </h2>
 
           <p className="mt-4 text-[#C9C6BE] text-[14.5px] leading-relaxed max-w-[50ch]">
-            10/11 Chief Jamiu, Elepe Royal Estate, Aga, Lagos
+            10/11 Chief Jamiu, Elepe Royal Estate, Aga, Ikorodu, Lagos
             <br />
             Open Mon–Sat, 8AM–7PM
           </p>

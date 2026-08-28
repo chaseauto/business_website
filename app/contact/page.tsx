@@ -12,7 +12,6 @@ const serviceOptions = [
   "AC",
   "Electrical",
   "Charging System Diagnosis",
-  "Parasitic Drain Test",
   "Car Scanning & Programming",
   "Suspension & Alignment",
   "Car Wash",
@@ -157,7 +156,7 @@ export default function ContactPage() {
                   Address
                 </span>
                 <span className="text-[13.5px] font-semibold text-right">
-                  10/11 Chief Jamiu, Elepe Royal Estate, Aga, Lagos
+                  10/11 Chief Jamiu, Elepe Royal Estate, Aga, Ikorodu, Lagos
                 </span>
               </div>
               <div className="flex justify-between items-center px-4 py-3 border-b border-line bg-panel">

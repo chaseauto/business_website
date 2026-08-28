@@ -17,7 +17,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
           {/* Address side */}
           <div className="flex-1 bg-panel text-charcoal py-3 px-5 flex items-center justify-start">
             <span className="opacity-90">
-              10/11 Chief Jamiu, Elepe Royal Estate, Aga, Lagos
+              10/11 Chief Jamiu, Elepe Royal Estate, Aga, Ikorodu, Lagos
             </span>
           </div>
           {/* Open Now side */}
