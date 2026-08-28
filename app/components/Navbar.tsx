@@ -146,6 +146,7 @@ export default function Navbar() {
               <Image
                 src="/images/hamburger.png"
                 alt="Open"
+                unoptimized
                 width={30}
                 height={30}
               />
