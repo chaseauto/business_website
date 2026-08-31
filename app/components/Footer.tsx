@@ -39,7 +39,7 @@ const socials = [
   },
   {
     name: "TikTok",
-    href: "https://tiktok.com/@chaseautomobiles",
+    href: "https://tiktok.com/@chaseautomobile",
     hoverBorder: "hover:border-[#25F4EE] hover:bg-white/5",
     icon: (
       <svg viewBox="0 0 24 24" className="w-4.5 h-4.5">
