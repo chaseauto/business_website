@@ -4,9 +4,12 @@ import Navbar from "./components/Navbar";
 import HeaderStatus from "./components/HeaderStatus";
 
 export const metadata: Metadata = {
-  title: "Chase Automobiles — Car Repair Experts",
+  title: {
+    default: "Chase Automobiles — Expert Auto Diagnostics & Car Repairs in Ikorodu, Lagos",
+    template: "%s | Chase Automobiles",
+  },
   description:
-    "Your car, fixed right, the first time. Engine, transmission, brakes, AC and electrical repairs by mechanics who stand behind their work.",
+    "Professional car repair & auto diagnostics workshop in Ikorodu, Lagos. Engine diagnostics, transmission service, AC repairs, brakes, electricals, scanning, and detailing.",
 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
