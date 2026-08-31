@@ -17,14 +17,14 @@ const services: Service[] = [
     slug: "engine-diagnostics-repair",
     title: "Engine Diagnostics & Repair",
     description:
-      "Warning lights, rough idling, power loss — properly diagnosed, properly fixed.",
+      "Warning lights, rough idling, power loss are properly diagnosed, and properly fixed.",
     image: "/images/car_diagnostics.png",
   },
   {
     slug: "transmission-repair",
     title: "Transmission Repair",
     description:
-      "Slipping gears, delayed shifts, unusual noise — full transmission service.",
+      "Slipping gears, delayed shifts, unusual noise and full transmission service.",
     image: "/images/under_hood.png",
   },
   {
@@ -36,7 +36,8 @@ const services: Service[] = [
   {
     slug: "ac-servicing",
     title: "AC Servicing",
-    description: "Not cooling, strange smell, weak airflow — restored fast.",
+    description:
+      "Not cooling, strange smell, weak airflow are all restored fast.",
     image: "/images/ac-repairs.png",
   },
   {
@@ -72,7 +73,7 @@ const services: Service[] = [
     slug: "suspension",
     title: "Suspension Repair",
     description:
-      "Shocks, struts, bushings, ball joints — smoother ride and precision handling.",
+      "Shocks, struts, bushings, ball joints fixed for a smoother ride and precision handling.",
     image: "/images/suspension.png",
   },
   {
@@ -851,7 +852,7 @@ export default function ServicesClient() {
             </a>
 
             <a
-              href="https://www.google.com/maps/search/?api=1&query=Chase+Automobiles+Oba+Sekumade+Road+Ikorodu+Lagos"
+              href="https://www.google.com/maps/search/?api=1&query=Chase+Automobile+Services+10+11+Chief+Jamiu+Elepe+Royal+Estate+Aga+Ikorodu+Lagos"
               target="_blank"
               rel="noopener noreferrer"
               className="flex-1 flex items-center justify-center px-5 py-3.75 border border-steel text-concrete font-bold text-[14px] uppercase tracking-wide hover:border-concrete transition-all"

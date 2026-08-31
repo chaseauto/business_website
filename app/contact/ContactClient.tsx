@@ -5,7 +5,7 @@ import Image from "next/image";
 import Footer from "../components/Footer";
 
 const serviceOptions = [
-  "Not sure — need a diagnosis",
+  "Not sure. I need a diagnosis",
   "Engine",
   "Transmission",
   "Brakes",
@@ -117,7 +117,7 @@ export default function ContactClient() {
                 WhatsApp Us
               </a>
               <a
-                href="#contact"
+                href="#workshop-details"
                 className="flex-1 flex items-center justify-center gap-2 px-5 py-3.75 rounded font-bold text-[15px] uppercase tracking-wide bg-transparent text-concrete border-[1.5px] border-steel hover:border-line transition-all"
               >
                 Get Directions
@@ -128,7 +128,7 @@ export default function ContactClient() {
       </section>
 
       {/* Workshop details + map */}
-      <section className="py-11">
+      <section id="workshop-details" className="py-11 scroll-mt-20">
         <div className="max-w-280 mx-auto px-5 grid grid-cols-1 md:grid-cols-2 gap-8">
           <div>
             <div className="text-xs font-bold text-rust uppercase tracking-widest mb-2">
@@ -220,14 +220,28 @@ export default function ContactClient() {
             </p>
 
             {submitted ? (
-              <div className="border border-hazard bg-hazard/10 rounded p-5">
-                <p className="text-[15px] font-bold text-hazard">
-                  Got it — thanks.
-                </p>
-                <p className="text-[13.5px] text-[#C9C6BE] mt-1">
-                  We'll reach out shortly. If it's urgent, just call or WhatsApp
-                  us directly using the buttons above.
-                </p>
+              <div className="border border-hazard bg-hazard/10 rounded p-6 space-y-4">
+                <div>
+                  <p className="text-[16px] font-bold text-hazard">
+                    Enquiry Received. Thank you!
+                  </p>
+                  <p className="text-[14px] text-[#C9C6BE] mt-1">
+                    We will review your vehicle request and get back to you
+                    shortly by phone or WhatsApp.
+                  </p>
+                </div>
+                <div className="pt-1">
+                  <a
+                    href={`https://wa.me/2347073836074?text=${encodeURIComponent(
+                      `Hello Chase Automobiles, my name is ${form.name}. Phone: ${form.phone}. Need: ${form.need}.${form.message ? ` Message: ${form.message}` : ""}`,
+                    )}`}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-2 px-5 py-3 rounded font-bold text-[13.5px] uppercase tracking-wide bg-hazard text-white hover:bg-opacity-90 transition-all shadow-md"
+                  >
+                    Send to WhatsApp for Instant Confirmation →
+                  </a>
+                </div>
               </div>
             ) : (
               <form onSubmit={handleSubmit} className="space-y-4">
@@ -307,7 +321,7 @@ export default function ContactClient() {
                     rows={4}
                     value={form.message}
                     onChange={handleChange}
-                    placeholder="Anything else worth knowing — symptoms, when it started, etc."
+                    placeholder="Anything else worth knowing: symptoms, when it started, etc."
                     className="w-full bg-transparent border border-steel rounded px-4 py-3 text-[14.5px] text-concrete placeholder:text-[#6B6B65] focus:outline-none focus:border-hazard transition-colors resize-none"
                   />
                 </div>
@@ -350,7 +364,7 @@ export default function ContactClient() {
           WhatsApp
         </a>
         <a
-          href="https://www.google.com/maps/search/?api=1&query=Chase+Automobiles+Oba+Sekumade+Road+Ikorodu+Lagos"
+          href="https://www.google.com/maps/search/?api=1&query=Chase+Automobile+Services+10+11+Chief+Jamiu+Elepe+Royal+Estate+Aga+Ikorodu+Lagos"
           target="_blank"
           rel="noopener noreferrer"
           className="flex-1 flex flex-col items-center justify-center gap-0.5 py-2.5 pb-3.5 text-[11px] font-bold uppercase tracking-wide text-concrete hover:bg-[#222] transition-colors"

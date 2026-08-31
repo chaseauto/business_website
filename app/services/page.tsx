@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import ServicesClient from "./ServicesClient";
 
 export const metadata: Metadata = {
-  title: "Automotive Repair Services & Diagnostics",
+  title: "Our Services & Diagnostics",
   description:
     "Comprehensive car maintenance and repair services in Ikorodu, Lagos: engine diagnostics, transmission service, auto electricals, AC repairs, wheel balancing & alignment, car wash, detailing, and collision repair.",
 };

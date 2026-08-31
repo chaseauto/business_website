@@ -230,8 +230,8 @@ export default function HomeClient() {
                   Engine Diagnostics &amp; Repair
                 </h3>
                 <p className="text-[13.5px] text-steel mb-2.5">
-                  Warning lights, rough idling, power loss — properly diagnosed,
-                  properly fixed.
+                  Warning lights, rough idling, power loss are properly
+                  diagnosed, and properly fixed.
                 </p>
                 <a
                   href="#contact"
@@ -261,7 +261,7 @@ export default function HomeClient() {
                   Transmission Repair
                 </h3>
                 <p className="text-[13.5px] text-steel mb-2.5">
-                  Slipping gears, delayed shifts, unusual noise — full
+                  Slipping gears, delayed shifts, unusual noise and full
                   transmission service.
                 </p>
                 <a
@@ -322,7 +322,7 @@ export default function HomeClient() {
             </span>
           </div>
           <div className="text-[13px] font-bold text-steel uppercase tracking-wide">
-            Serving Ikorodu &amp; Lagos since 2023
+            Serving Ikorodu &amp; Lagos since 2022
           </div>
         </div>
       </div>
@@ -474,7 +474,7 @@ export default function HomeClient() {
               Chat on WhatsApp
             </a>
             <a
-              href="https://www.google.com/maps/search/?api=1&query=Chase+Automobiles+Oba+Sekumade+Road+Ikorodu+Lagos"
+              href="https://www.google.com/maps/search/?api=1&query=Chase+Automobile+Services+10+11+Chief+Jamiu+Elepe+Royal+Estate+Aga+Ikorodu+Lagos"
               target="_blank"
               rel="noopener noreferrer"
               className="flex-1 flex items-center justify-center gap-2 px-5 py-3.75 rounded font-bold text-[15px] uppercase tracking-wide bg-transparent text-concrete border-[1.5px] border-steel hover:border-line transition-all"

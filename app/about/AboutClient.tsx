@@ -77,7 +77,7 @@ export default function AboutClient() {
                 WhatsApp Us
               </a>
               <a
-                href="#contact"
+                href="/contact"
                 className="flex-1 flex items-center justify-center gap-2 px-5 py-3.75 rounded font-bold text-[15px] uppercase tracking-wide bg-transparent text-concrete border-[1.5px] border-steel hover:border-line transition-all"
               >
                 Get Directions
@@ -108,13 +108,12 @@ export default function AboutClient() {
             <h2 className="text-[24px] font-extrabold mb-4 font-display uppercase leading-tight">
               Fix it right, explain it clearly, stand behind it.
             </h2>
-            <p className="text-[14.5px] text-steel leading-relaxed mb-4">
+            <p className="text-[14.5px] text-steel leading-relaxed">
               We diagnose the problem before recommending the repair. With
               modern diagnostic equipment, experienced technicians, transparent
               pricing, and direct communication, Chase Automobiles gives you
               confidence in every repair.
             </p>
-            <p className="text-[14.5px] text-steel leading-relaxed"></p>
           </div>
         </div>
       </section>
@@ -129,7 +128,7 @@ export default function AboutClient() {
             Bring Your Car In, Or Talk To Us First
           </h2>
           <p className="text-[#C9C6BE] text-[14.5px] max-w-[52ch]">
-            Call, message us on WhatsApp, or drive straight in — whichever's
+            Call, message us on WhatsApp, or drive straight in. Whichever's
             easiest for you.
           </p>
 
