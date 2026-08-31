@@ -46,7 +46,7 @@ const socials = [
   },
   {
     name: "TikTok",
-    href: "https://tiktok.com/@chaseautomobiles",
+    href: "https://www.tiktok.com/@chaseautomobile?is_from_webapp=1&sender_device=pc",
     icon: (
       <svg viewBox="0 0 24 24" className="w-5 h-5">
         <path
