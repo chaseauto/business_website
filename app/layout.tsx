@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import Navbar from "./components/Navbar";
+import HeaderStatus from "./components/HeaderStatus";
 
 export const metadata: Metadata = {
   title: "Chase Automobiles — Car Repair Experts",
@@ -20,12 +21,8 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
               10/11 Chief Jamiu, Elepe Royal Estate, Aga, Ikorodu, Lagos
             </span>
           </div>
-          {/* Open Now side */}
-          <div className="bg-charcoal text-hazard py-3 px-6 sm:px-12 flex items-center justify-center">
-            <span className="font-bold uppercase text-[11px] tracking-wide">
-              Open Now · Closes 7PM
-            </span>
-          </div>
+          {/* Dynamic Opening Hours / Status side */}
+          <HeaderStatus />
         </div>
 
         {/* Navigation */}

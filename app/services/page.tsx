@@ -59,7 +59,7 @@ const services: Service[] = [
     title: "Car Scanning & Programming",
     description:
       "Advanced OEM diagnostics, ECU re-flashing, module coding, sensor calibration, and key programming.",
-    image: "/images/car-programming.png",
+    image: "/images/car_programming.png",
   },
   {
     slug: "wheel_balancing-alignment",
@@ -830,7 +830,7 @@ export default function ServicesPage() {
           <p className="mt-4 text-[#C9C6BE] text-[14.5px] leading-relaxed max-w-[50ch]">
             10/11 Chief Jamiu, Elepe Royal Estate, Aga, Ikorodu, Lagos
             <br />
-            Open Mon–Sat, 8AM–7PM
+            Mon–Fri: 8:00 AM – 6:00 PM · Sat: 8:00 AM – 2:00 PM (Closed Sun)
           </p>
 
           <div className="flex flex-col md:flex-row gap-2.5 mt-7">
